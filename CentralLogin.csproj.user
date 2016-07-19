@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NameOfLastUsedPublishProfile>Local</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>URL</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>http://localhost:60500//CentralLogin/Default.aspx?appname=core&amp;URL=https://logon.dev2.iam.va.gov/CentralLogin/core/redirect.aspx&amp;TYPE=33619969&amp;REALMOID=06-e9bba37d-5ffc-49e2-aacd-247aca830e8a&amp;GUID=&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-rCzerr%2fZcM8bVQwUhkZ11lZR1R7UPEZupPeX0%2b0nqmB%2fITRyhfrMp1WWTjM0Veh8&amp;TARGET=-SM-http%3a%2f%2flogon%2edev2%2eiam%2eva%2egov%2ftesttraits%2fvha%2findex%2easp</StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>True</EnableENC>
+          <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60500/CentralLogin</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

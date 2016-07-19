@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{392CCD72-E720-4059-8A74-5327ACB647E4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CentralLogin</RootNamespace>
+    <AssemblyName>CentralLogin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="azfailed.aspx" />
+    <Content Include="bin\CentralLogin.dll" />
+    <Content Include="bin\CentralLogin.pdb" />
+    <Content Include="centrallanding.aspx" />
+    <Content Include="concurloginfailed.aspx" />
+    <Content Include="core\IWA\redirect.aspx" />
+    <Content Include="core\PIV\piv.aspx" />
+    <Content Include="core\redirect.aspx" />
+    <Content Include="csploginfailed.aspx" />
+    <Content Include="csserror.aspx" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\centrallogin.css" />
+    <Content Include="CustomError\401.aspx" />
+    <Content Include="CustomError\403.aspx" />
+    <Content Include="CustomError\404.aspx" />
+    <Content Include="CustomError\405.aspx" />
+    <Content Include="CustomError\406.aspx" />
+    <Content Include="CustomError\412.aspx" />
+    <Content Include="CustomError\500.aspx" />
+    <Content Include="CustomError\501.aspx" />
+    <Content Include="CustomError\502.aspx" />
+    <Content Include="CustomError\failedlogin.aspx" />
+    <Content Include="eGainloginfailed_1001.aspx" />
+    <Content Include="eGainloginfailed_1029.aspx" />
+    <Content Include="failedlogin.aspx" />
+    <Content Include="idletimeout.aspx" />
+    <Content Include="img\cl-blue-ribbon.png" />
+    <Content Include="img\cl-dark-blue.png" />
+    <Content Include="img\cl-footer.png" />
+    <Content Include="img\cl-piv-lg.png" />
+    <Content Include="img\cl-piv-sm.png" />
+    <Content Include="img\cl-signon-modal.png" />
+    <Content Include="img\cl-va-emblem-modal.png" />
+    <Content Include="img\cl-va-emblem.jpg" />
+    <Content Include="img\cl-x-close-modal.png" />
+    <Content Include="img\sso-mod-btn-row.png" />
+    <Content Include="img\sso-mod-header.png" />
+    <Content Include="img\sso-mod-va.png" />
+    <Content Include="img\sso-mod-vline.png" />
+    <Content Include="img\sso-mod-wia.png" />
+    <Content Include="img\x-cl-dark-blue-modal.png" />
+    <Content Include="help.aspx" />
+    <Content Include="iploginfailed.aspx" />
+    <Content Include="IWAhelp.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-2.2.4.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="loggedout.aspx" />
+    <Content Include="mviloginfailed.aspx" />
+    <Content Include="provloginfailed.aspx" />
+    <Content Include="teamsiteloginfailed.aspx" />
+    <Content Include="vicloginfailed.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="UIDhelp.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="centrallanding.aspx.cs">
+      <DependentUpon>centrallanding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="centrallanding.aspx.designer.cs">
+      <DependentUpon>centrallanding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="core\redirect.aspx.cs">
+      <DependentUpon>redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="core\redirect.aspx.designer.cs">
+      <DependentUpon>redirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="help.aspx.cs">
+      <DependentUpon>help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="help.aspx.designer.cs">
+      <DependentUpon>help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Header.Master.cs">
+      <DependentUpon>Header.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Header.Master.designer.cs">
+      <DependentUpon>Header.Master</DependentUpon>
+    </Compile>
+    <Compile Include="IWAhelp.aspx.cs">
+      <DependentUpon>IWAhelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IWAhelp.aspx.designer.cs">
+      <DependentUpon>IWAhelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIDhelp.aspx.cs">
+      <DependentUpon>UIDhelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIDhelp.aspx.designer.cs">
+      <DependentUpon>UIDhelp.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Header.Master" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="bin\CentralLogin.dll.config" />
+    <None Include="Properties\PublishProfiles\deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\IIS Local.pubxml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
