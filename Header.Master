@@ -38,7 +38,7 @@
 <!--Page Header-->
     <div class="page-header" style="margin-top:0px;">
         <div class="row" style="background-image: url('img/cl-dark-blue.png'); background-size:cover; background-repeat:no-repeat">
-            <img class="img-responsive" src="img/cl-va-emblem.jpg" alt="VA Emblem"/>
+            <img class="img-responsive" src="img/cl-va-logo-transparent.png" alt="VA Emblem"/>
  
         </div>
         <div class="row text-center" style="background-color:#1677bd; height: 35px; vertical-align:middle /*margin-left:-16px;*/">
@@ -56,7 +56,7 @@
                 <asp:ContentPlaceHolder ID="siteminderContent" runat="server"></asp:ContentPlaceHolder>
 
              <!-- Legal Warning-->
-            <div class="row" style="font-size:smaller; text-align:left; overflow-x: auto; overflow-y: hidden; margin-left:5%;  margin-right:5%">
+            <div class="row  mstr-legal-warning-row" >
                 <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2" style="color: #990000; text-align:right" >
                     <p>WARNING: </p>
                 </div>
@@ -94,7 +94,7 @@
                 <img src="img/cl-x-close-modal.png" alt="Close Modal" width="20px"/>
             </button>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6"><img src="img/cl-va-emblem-modal.png" alt="VA Emblem Modal" ></div>
+                    <div class="col-xs-6 col-sm-6"><img src="img/cl-va-logo-modal.png" alt="VA Emblem Modal" ></div>
                </div>
              </div>
 
@@ -149,7 +149,7 @@
             <div class="modal-footer" style ="padding-top: 0px; border:0px">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
-                        <button type="button" class="btn-default btn-sm" style="float: left;" data-dismiss="modal">Back</button>
+                        <button type="button" class="widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal">Back</button>
                     </div>
                 </div>            
             </div>

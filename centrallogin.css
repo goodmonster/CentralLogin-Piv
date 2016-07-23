@@ -26,15 +26,13 @@ body {
 }
 .sm-top-text-outer-div {
     width: 80%;
-    height: 50%;
+    height: 45%;
     /* float: none; */
     position: relative;
     margin-left: 10%;
-    /* border: 1px solid black; */
 }
 .sm-text-inner-div {
-    margin-top: 50%;
-    /*border:1px solid green;/*debug*/
+    margin-top: 40%;
 }
 .sm-upper-white-text {
     /* font-family: Arial, Helvetica, sans-serif !important; */
@@ -60,7 +58,7 @@ body {
 
 .sm-piv-upper {
     height: 80%;
-    margin-left: 20%;
+    margin-left: 15%;
     /*height: 36%;  controls how much vertical space the PIV image takes */
     /*border: 1px solid red;/*debug*/
 }
@@ -81,11 +79,13 @@ body {
     padding: 0;
     margin: 0;
     /* font-family: Arial, Helvetica, sans-serif !important; */
-    font-size: 14px;
+    font-size: 9px;
     color: white;
     font-weight: 200;
     /* margin-left: 18%; */
+    text-decoration: underline;
 }
+
 /* custom styles here should be tweaked and out in your style sheets */
 /* other styles not here are either bootstrap or from accessva.css both included above */
 
@@ -139,32 +139,34 @@ body {
     height: 100%;/**/
     padding: 5% 6% 0 0; /* this controls the placement of the right side "stuff" */
     /*border:1px solid blue;/*debug*/
+    margin: 1% 0 0 20%;
 }
 
 .piv-upper {
-    height: 83%; /* controls how much vertical space the PIV image takes */
+    height: 80%; /* controls how much vertical space the PIV image takes */
     /*border: 1px solid red;/*debug*/
 }
 
+.piv-img {
+    max-width: 90%;
+    max-height: 90%;
+    margin-left: 19%;
+}
 .piv-lower {
     padding: 0;
-    margin: 0 11% 0 0; /* this makes the link under the PIV image centered under the image */
+    margin: -4% 0 0 17%; /* this makes the link under the PIV image centered under the image */
     /*background-color: pink;/*debug*/
-}
-
-.piv-img {
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: 12%;
+    /* border: solid; */
 }
 
 .piv-lower a {
     padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif !important;
+    /* margin: 0 0 0 15%; */
+    /* font-family: Arial, Helvetica, sans-serif !important; */
     font-size: 13px;
     color: white;
-    margin-left: 15%;
+    /* margin-left: 15%; */
+    text-decoration: underline;
 }
 
 .upper-white-text {
@@ -179,124 +181,14 @@ body {
     color: white;
 }
 
-
-/* breakpoints below are for example only...they may need some fine tuning or different breaks */
-/* I just grouped them together for simplicity here */
-
-@media only screen and (max-width : 850px) {
-    .piv-lower a {
-        font-size: 11px;
-    }
-    .upper-white-text {
-        font-size: 30px;
-    }
-    .lower-white-text {
-        font-size: 16px;
-    }
-}
-
-@media only screen and (max-width : 750px) {
-    .piv-lower a {
-        font-size: 10px;
-    }
-    .piv-upper {
-        height: 81%; /* without this the words under shift down -- placement of "View Other Sign-in Options" is not perfect */
-    }
-    .upper-white-text {
-        font-size: 26px;
-    }
-    .lower-white-text {
-        font-size: 12px;
-    }
-}
-
-/*@media only screen and (max-width : 650px) {*/
-    /**/
-    /*.piv-lower a {*/
-        /*font-size: 8px;*/
-    /*}*/
-    /*.piv-upper {*/
-        /*height: 79%; !* probably will switch to vertical before this happens *!*/
-    /*}*/
-    /*.upper-white-text {*/
-        /*font-size: 22px;*/
-    /*}*/
-    /*.lower-white-text {*/
-        /*font-size: 10px;*/
-    /*}*/
-/*}*/
-
-@media only screen and (max-width : 650px) {
-
-    .sm-piv-lower a {
-        font-size: 11px;
-    }
-    .sm-piv-upper {
-        height: 80%; /* probably will switch to vertical before this happens */
-    }
-    .sm-upper-white-text {
-        font-size: 19px;
-        /* color:  black; */
-    }
-    .sm-lower-white-text {
-        font-size: 13px;
-    }
-}
-
-@media only screen and (max-width : 550px) {
-
-    .sm-piv-lower a {
-        font-size: 11px;
-    }
-
-    .sm-piv-upper {
-        height: 80%;
-    }
-
-    .sm-upper-white-text {
-        font-size: 15px;
-        /* color:  black; */
-    }
-
-    .sm-lower-white-text {
-        font-size: 9px;
-    }
-
-    .sm-piv-lower a {
-        padding: 0;
-        /* margin: 0; */
-        /* font-family: Arial, Helvetica, sans-serif !important; */
-        font-size: 8px;
-        color: white;
-        /* font-weight: 200; */
-        /* margin-left: 18%; */
-    }
-}
-    @media only screen and (max-width : 450px) {
-
-        .sm-piv-lower a {
-            font-size: 11px;
-        }
-        .sm-piv-upper {
-            height: 80%;
-        }
-        .sm-upper-white-text {
-            font-size: 12px;
-            /* color:  black; */
-        }
-        .sm-lower-white-text {
-            font-size: 7px;
-        }
-        .sm-piv-lower a {
-            padding: 0;
-            /* margin: 0; */
-            /* font-family: Arial, Helvetica, sans-serif !important; */
-            font-size: 8px;
-            color: white;
-            /* font-weight: 200; */
-            /* margin-left: 18%; */
-        }
-
+/*Master Template*/
+    .mstr-legal-warning-row{
+        font-size:smaller;
+        text-align:left;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-left:5vh;
+        margin-right:5vh
     }
 
     /*Modal Buttons*/
@@ -352,6 +244,14 @@ body {
     border: 1px solid #7f7f7f;
     border-radius: 0px;
     }
+    .widget-confirm-redirect-next-button {
+    background-color: #1677bd;
+    width: 83px !important;
+    max-width: 83px !important;
+    min-width: 83px !important;
+    border: 1px solid #0071a5;
+    border-radius: 0px;
+}
 
 /************************************/
 /* SPECIAL 508 COMPLIANCE ITEMS     */
@@ -385,3 +285,122 @@ body {
 	-webkit-transition: top .1s ease-in, background .5s linear;
     transition: top .1s ease-in, background .5s linear;
 }
+
+/*              MEDEA POINTS            */
+
+/* breakpoints below are for example only...they may need some fine tuning or different breaks */
+/* I just grouped them together for simplicity here */
+@media only screen and (max-width : 850px) {
+    .piv-lower a {
+        font-size: 11px;
+    }
+    .upper-white-text {
+        font-size: 30px;
+    }
+    .lower-white-text {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width : 750px) {
+    .piv-lower a {
+        font-size: 10px;
+    }
+    .piv-upper {
+        height: 81%; /* without this the words under shift down -- placement of "View Other Sign-in Options" is not perfect */
+    }
+    .upper-white-text {
+        font-size: 26px;
+    }
+    .lower-white-text {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width : 650px) {
+
+    .sm-piv-lower a {
+        font-size: 8px;
+    }
+    .sm-piv-upper {
+        height: 80%; /* probably will switch to vertical before this happens */
+    }
+    .sm-upper-white-text {
+        font-size: 19px;
+        /* color:  black; */
+    }
+    .sm-lower-white-text {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width : 550px) {
+
+    .sm-piv-lower a {
+        font-size: 11px;
+    }
+
+    .sm-piv-upper {
+        height: 80%;
+    }
+
+    .sm-upper-white-text {
+        font-size: 15px;
+        /* color:  black; */
+    }
+
+    .sm-lower-white-text {
+        font-size: 9px;
+    }
+
+    .sm-piv-lower a {
+        padding: 0;
+        /* margin: 0; */
+        /* font-family: Arial, Helvetica, sans-serif !important; */
+        font-size: 7px;
+        color: white;
+        /* font-weight: 200; */
+        /* margin-left: 18%; */
+    }
+}
+
+@media only screen and (max-width : 450px) {
+
+        .sm-piv-lower a {
+            font-size: 6px;
+        }
+        .sm-piv-upper {
+            height: 80%;
+        }
+        .sm-upper-white-text {
+            font-size: 12px;
+            /* color:  black; */
+        }
+        .sm-lower-white-text {
+            font-size: 7px;
+        }
+        .sm-piv-lower a {
+            /* padding: 0; */
+            /* margin: 0; */
+            /* font-family: Arial, Helvetica, sans-serif !important; */
+            /* font-size: 8px; */
+            /* color: white; */
+            /* font-weight: 200; */
+            /* margin-left: 18%; */
+        }
+    }
+
+@media only screen and (max-width : 400px) {
+        .sm-upper-white-text {
+            font-size: 10px;
+        }
+        
+        .sm-piv-lower a {
+             font-size: 5px;
+        }
+        .mstr-legal-warning-row{
+            margin-left: -15px;
+            margin-right: -15px;
+    }
+        
+}  

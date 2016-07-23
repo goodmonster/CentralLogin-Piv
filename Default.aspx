@@ -136,7 +136,7 @@ Session["Target"] = tv;
                                                  
                                               </div>
                                               <div class="sm-piv-lower">
-                                                 <a href="#" data-toggle="modal" data-target="#other-sign-in-modal">View Other Sign-in Options</a>
+                                                 <a href="#" data-toggle="modal" data-target="#other-sign-in-modal" >View Other Sign-in Options</a>
                                               </div>
                                           </div><!--end of piv-div-->
 
@@ -324,11 +324,11 @@ Session["Target"] = tv;
                 <p>&nbsp;</p>
 
                 <div class="row">
-                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                          <button type="button" id="va-network-sign-in-modal-back" class="btn-default widget-confirm-redirect-cancel-button"  data-dismiss="modal">Back</button>
                    </div>
-                    <div class="col-lg-11  col-md-11 col-sm-11 col-xs-10">
-                        <button type="button" id="va-network-sign-in-modal-signin" class="btn-default btn-primary" style="border-radius: 0px; float: right;" onclick="javascript: checkLogin();"> Sign In </button>
+                    <div class="col-lg-10  col-md-10 col-sm-10 col-xs-10">
+                        <button type="button" id="va-network-sign-in-modal-signin" class="widget-confirm-redirect-next-button" style="border-radius: 0px; float: right;" onclick="javascript: checkLogin();"> Sign In </button>
                     </div>
                 </div>
 
