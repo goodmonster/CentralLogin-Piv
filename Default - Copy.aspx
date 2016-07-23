@@ -103,7 +103,7 @@ Session["Target"] = tv;
 <input type="hidden" name="SMLOCALE" value="US-EN" />
         <!--Main Pannel-->
         <div class="panel-body" id="mainPanelBody"  >
-        <link href="centrallogin.css" type="text/css" rel="stylesheet"  />
+<link href="centrallogin.css" type="text/css" rel="stylesheet"  />
             <div id="ContentBody" >
 
                 <!--Main Pannel-->
@@ -133,7 +133,9 @@ Session["Target"] = tv;
                                                <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">
                                                      <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">                                                
                                                </asp:LinkButton>
-                                                 
+                                                 <%-- <a class="zzz" href="http://m.va.gov/">
+                                                      <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">
+                                                  </a>--%>
                                               </div>
                                               <div class="sm-piv-lower">
                                                  <a href="#" data-toggle="modal" data-target="#other-sign-in-modal">View Other Sign-in Options</a>
@@ -171,6 +173,7 @@ Session["Target"] = tv;
                                                </asp:LinkButton>
                                               </div>
                                               <div class="piv-lower">
+                                                 <%--<div class="btn-link" style="position: absolute; left: 20%; bottom: 5%; height: 10%; width: 60%; /*border: double*/" data-toggle="modal" data-target="#other-sign-in-modal">View Other Sign-in Options</div>--%>
                                                    <a href="#" data-toggle="modal" data-target="#other-sign-in-modal">View Other Sign-in Options</a>
                                             </div>
                                           </div><!--end of piv-div-->
@@ -188,11 +191,13 @@ Session["Target"] = tv;
                 </div><!--end of mainPageEnclosingDiv-->
 
     </form>
-
+  
+    
     <!-- Modal Markup kept out of all the div elements -->
     <div class="modal fade" id="other-sign-in-modal">
 
-         <div class="modal-dialog" style="max-width:528px;">
+        <div class="modal-dialog" >
+
             <div class="modal-content">
                 <!-- Modal Header -->
                 <!--http://stackoverflow.com/questions/15976709/bootstrap-modal-with-buttonimg-that-hangs-over-the-edge-->
@@ -208,42 +213,58 @@ Session["Target"] = tv;
                 <!-- Modal Body -->
                 <div class="modal-body" style="margin-left:15% ;margin-right:15%; text-align: center;">
 
+                     <%--<div class="row" style="display:flex; min-height:82px; align-items:center; border:1px solid;  background-color:#e9f0ff;">--%>
 
-                    <div class="row">
-                         <div class="col-xs-12 cspselect-button-responsive-column">
-							<button id="btn_iwa_logon" class="btn cspselect-csp-button" title="Sign in with Windows Authentication" onclick="javascript: signinIWA();">
+                     <div class="clickable-row cspselect-csp-button" href="http://google.com">
 
-								<div class="cspselect-button-logo-div">
-									<div class="css-table-max-width-and-height">
-										<div class="css-table-cell-fully-centered">
-											<img class="cspselect-csp-logo-tall" src="img/sso-mod-wia.png" alt="Sign in with Windows Authentication">
-										</div><!--close table-cell div-->
-									</div><!--close table div-->
-								</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                             <button type="button" class="btn-link"  data-target="#va-network-sign-in-modal" data-dismiss="modal" onclick="javascript: signinIWA();" style="border: 0; background: transparent url(img/sso-mod-wia.png); height: 45px; width: 47px; margin: 25%"/>
+                        </div>
 
-								<div class="cspselect-button-text-div">
-									<div class="css-table-max-width-and-height">
-										<div class="css-table-cell-fully-centered">
-                                          <b>Sign in with</b><br/>
-                                          <b>Windows Authentication</b>
- 									    </div><!--close table-cell div-->
-									</div><!--close table div-->
-								</div>
-							</button>
-						</div> <%-- end of colum --%>
-                       </div> <%-- end of row --%>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <img src="img/sso-mod-vline.png" align="left">
+                        </div>
+
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                               <b>Sign in with</b><br/>
+                               <b>Windows Authentication</b>
+                        </div>
+                    </div>
 
                     <%-- Spacer row --%>
                     <div class="row"><div class="col-md-12">&nbsp;</div></div>
+                    <%--button type="button" class="btn-link" data-toggle="modal" data-target="#va-network-sign-in-modal" data-dismiss="modal"--%> 
+                   <div class="row cspselect-csp-button">
+                    <%--<div class="row" style="display:flex; min-height:82px; align-items:center; border:1px solid;  background-color:#e9f0ff;">--%>
 
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <%--<button type="button" class="btn-link" data-toggle="modal" data-target="#va-network-sign-in-modal" data-dismiss="modal"  style=" border: 0; background: transparent url(img/sso-mod-va.png); height: 50px; width: 50px; margin: 25%" />--%>
+                            <button type="button" style=" border: 0; background: transparent url(img/sso-mod-va.png); height: 50px; width: 50px; margin: 25%" />
+                         </div>
+
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <img src="img/sso-mod-vline.png" align="left">
+                        </div>
+
+                        <!--<div class="col-lg-6 col-md-9 col-sm-9 col-xs-9" style="background-image: url(img/sso-mod-vline.png) ; background-repeat: no-repeat; /*margin-top: 10px; line-height: 0.5;*/">-->
+                        <%--<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">--%>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"> 
+                                <b>Sign in with</b><br/>
+                                <b>VA Network ID</b><br/>
+                                *Disabled for most users
+
+                        </div>
+                    </div>
+                    
                     <div class="row">
-                         <div class="col-xs-12 cspselect-button-responsive-column">
 
-                            <button class="btn cspselect-csp-button" data-toggle="modal" data-target="#va-network-sign-in-modal" data-dismiss="modal">
+                         <div class="col-xs-12 cspselect-button-responsive-column">
+							<button id="btn_ds_logon" class="btn cspselect-csp-button" title="Sign in with DS Logon" onclick="javascript: signinIWA();">
+
 								<div class="cspselect-button-logo-div">
 									<div class="css-table-max-width-and-height">
 										<div class="css-table-cell-fully-centered">
-											<img class="cspselect-csp-logo-tall" src="img/sso-mod-va.png" alt="VA Logon Logo">
+											<img class="cspselect-csp-logo-tall" src="img/sso-mod-va.png" alt="DS Logon Logo">
 										</div><!--close table-cell div-->
 									</div><!--close table div-->
 								</div>
@@ -251,23 +272,21 @@ Session["Target"] = tv;
 								<div class="cspselect-button-text-div">
 									<div class="css-table-max-width-and-height">
 										<div class="css-table-cell-fully-centered">
-											Sign in with<br/>
-                                            VA Network ID<br/>
-                                            <p style="font-weight: normal;">*Disabled for most users</p>
+													Sign in with<br>DS Logon
 										</div><!--close table-cell div-->
 									</div><!--close table div-->
 								</div>
-                             </button>
+							</button>
+						</div>
 
-						</div> <%-- end of colum --%>
-                       </div> <%-- end of row --%>
-
-                    </div> <%--modal body--%>
-                
+                         </div>
+                    </div>
+                </div>
                 
                 <div class="modal-footer" style ="padding-top: 0px; border:0px">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
+                        <%--widget-confirm-redirect-cancel-button--%>
                         <button type="button" class="widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal">Back</button>
                     </div>
                 </div>
@@ -276,10 +295,9 @@ Session["Target"] = tv;
             </div>
         </div>
     </div>
-
-      <%--Modal Va Network sign in dialog prompt for user id and password--%>
+  
+    <%--Modal Va Network sign in dialog prompt for user id and password--%>
     <div class="modal fade" id="va-network-sign-in-modal">
-
     <div class="modal-dialog" style="max-width:528px;">
 
         <div class="modal-content">
@@ -325,10 +343,10 @@ Session["Target"] = tv;
 
                 <div class="row">
                     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                         <button type="button" id="va-network-sign-in-modal-back" class="btn-default widget-confirm-redirect-cancel-button"  data-dismiss="modal">Back</button>
-                   </div>
+                        <button type="button" class="btn-default " style="border-radius: 0px; float: left;" data-dismiss="modal"> Back </button>
+                    </div>
                     <div class="col-lg-11  col-md-11 col-sm-11 col-xs-10">
-                        <button type="button" id="va-network-sign-in-modal-signin" class="btn-default btn-primary" style="border-radius: 0px; float: right;" onclick="javascript: checkLogin();"> Sign In </button>
+                        <button type="button" class="btn-default btn-primary" style="border-radius: 0px; float: right;" onclick="javascript: checkLogin();"> Sign In </button>
                     </div>
                 </div>
 
@@ -337,8 +355,5 @@ Session["Target"] = tv;
         </div>
     </div>
 </div>
-
-    
-  
 
 </asp:Content>

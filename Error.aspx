@@ -21,14 +21,14 @@
         <div class="row">
             <div class="col-md-12">
 
-                <div class="homeHeader corrected text-left">
+                <div>
                     VA Identity and Access Management Solution (IAM)
                 </div>
                
-                <div class="hometext corrected text-left">
-
+                <div>
                     Invalid credentials , please try <a href="Default.aspx">login again </a>
                 </div>
             </div>
         </div>
+        <p>&nbsp;</p>
     </asp:Content>

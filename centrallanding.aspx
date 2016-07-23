@@ -9,7 +9,7 @@
         }
     </script>
 
-    <div class="panel panel-default" style="border:0; font-family: 'Arial Bold', 'Arial'; font-size: 14px;  padding-top: 55px; padding-bottom: 55px;">
+    <div class="panel panel-default" style="border:0; padding-bottom: 55px;">
 
         <div class="panel-body" style="text-align:center">
 

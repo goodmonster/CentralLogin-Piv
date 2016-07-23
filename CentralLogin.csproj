@@ -72,7 +72,7 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
-    <Content Include="css\centrallogin.css" />
+    <Content Include="centrallogin.css" />
     <Content Include="CustomError\401.aspx" />
     <Content Include="CustomError\403.aspx" />
     <Content Include="CustomError\404.aspx" />
@@ -88,6 +88,8 @@
     <Content Include="failedlogin.aspx" />
     <Content Include="idletimeout.aspx" />
     <Content Include="img\cl-blue-ribbon.png" />
+    <Content Include="img\cl-blue-shell-v.png" />
+    <Content Include="img\cl-blue-shell.png" />
     <Content Include="img\cl-dark-blue.png" />
     <Content Include="img\cl-footer.png" />
     <Content Include="img\cl-piv-lg.png" />
@@ -96,11 +98,14 @@
     <Content Include="img\cl-va-emblem-modal.png" />
     <Content Include="img\cl-va-emblem.jpg" />
     <Content Include="img\cl-x-close-modal.png" />
+    <Content Include="img\cl-piv-btn.png" />
     <Content Include="img\sso-mod-btn-row.png" />
     <Content Include="img\sso-mod-header.png" />
     <Content Include="img\sso-mod-va.png" />
     <Content Include="img\sso-mod-vline.png" />
     <Content Include="img\sso-mod-wia.png" />
+    <Content Include="img\cl-blue-piv-back.png" />
+    <Content Include="img\cl-blue-piv-blank-lg.png" />
     <Content Include="img\x-cl-dark-blue-modal.png" />
     <Content Include="help.aspx" />
     <Content Include="iploginfailed.aspx" />

@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/header.Master" AutoEventWireup="true" Inherits="CentralLogin.WebForm2" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" Inherits="CentralLogin.WebForm2" %>
 
     <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     </asp:Content>
