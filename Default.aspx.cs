@@ -76,25 +76,26 @@ namespace CentralLogin
 		targetDisplayValue = "/Centrallogin/centrallanding.aspx";
             }	
         }
-        protected void PIV(object sender, EventArgs e)
-        {
-            String appname1 = Request["TARGET"];
-            Response.Redirect(appname1 + "/PIV/piv.aspx", true);
-        }
-        protected void IWAbutton(object sender, EventArgs e)
-        {
-            String appname = Request["appname"];
-            Response.Redirect("http://www.google.com", true);
-            //window.location = "SomePage.aspx";
-            //window.location.href = "SomePage.aspx";
-            //window.location.assign("SomePage.aspx");
-        }
 
-         protected void Network_Click(object sender, EventArgs e)
-        {
-            String appname = Request["appname"];
-            Response.Redirect(appname + "/network/redirect.aspx", true);
-        }
+        //protected void PIV(object sender, EventArgs e)
+        //{
+        //    String appname1 = Request["TARGET"];
+        //    Response.Redirect(appname1 + "/PIV/piv.aspx", true); /*fortify error*/
+        //}
+        //protected void IWAbutton(object sender, EventArgs e)
+        //{
+        //    String appname = Request["appname"];
+        //    Response.Redirect("http://www.google.com", true);
+        //    //window.location = "SomePage.aspx";
+        //    //window.location.href = "SomePage.aspx";
+        //    //window.location.assign("SomePage.aspx");
+        //}
+
+        // protected void Network_Click(object sender, EventArgs e)
+        //{
+        //    String appname = Request["appname"];
+        //    Response.Redirect(appname + "/network/redirect.aspx", true);
+        //}
   
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
@@ -112,11 +113,11 @@ namespace CentralLogin
 
         }
 
-        protected void PIVButton_Click(object sender, EventArgs e)
-        {
-           String appname = Request["appname"];
-           Response.Redirect(appname + "/PIV/piv.aspx", true);
-        }
+        //protected void PIVButton_Click(object sender, EventArgs e)
+        //{
+        //   String appname = Request["appname"];
+        //   Response.Redirect(appname + "/PIV/piv.aspx", true);
+        //}
 
     }
 }

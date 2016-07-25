@@ -49,8 +49,7 @@
     </div>
   <%--</div>--%>
 
-     <div class="panel-body" id="mainPanelBody"  >
-            <div id="skiplink" style="display: none;"><a href="#Content">skip to page content</a> </div>
+     <div class="panel-body" id="maincontent">
 
             <div id="ContentBody" >
                 <asp:ContentPlaceHolder ID="siteminderContent" runat="server"></asp:ContentPlaceHolder>
@@ -158,14 +157,9 @@
     </div>
 </div>
 
-
-<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
-<!--<script type="text/javascript" src="js/imageMapResizer.min.js"></script>-->
-<!--<script type="text/javascript">-->
-    <!--$('area').imageMapResize();-->
-<!--</script>-->
-    <script type="text/javascript">
+<script type="text/javascript">
        var notifyTimeout = '';
        var preModalSelectedID = '';
  

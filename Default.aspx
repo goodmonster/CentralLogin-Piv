@@ -42,16 +42,19 @@
 
             if (evt.keyCode == 13 || evt.which == 13) {
                 checkLogin();
-
             }
         }
 
         function signinIWA() {
-
             <% Session["appname"] =  Request.QueryString["appname"];%>
             appName = '<%= Session["appname"]%>'
             window.location = appName + '/IWA/redirect.aspx'
-            alert(window.location);
+        }
+
+       function signinPIV() {
+            <% Session["appname"] =  Request.QueryString["appname"];%>
+            appName = '<%= Session["appname"]%>'
+           window.location = appName + '/PIV/piv.aspx'
         }
 
     </script>
@@ -130,10 +133,12 @@ Session["Target"] = tv;
 
                                           <div class="sm-piv-div">
                                               <div class="sm-piv-upper">
-                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">
-                                                     <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">                                                
-                                               </asp:LinkButton>
-                                                 
+                                                  <a href="#" onclick="javascript: signinPIV();">
+                                                      <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
+                                                  </a>
+<%--                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">--%>
+                                                     <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">--%>                                                
+                                                   <%-- </asp:LinkButton>--%>
                                               </div>
                                               <div class="sm-piv-lower">
                                                  <a href="#" data-toggle="modal" data-target="#other-sign-in-modal" >View Other Sign-in Options</a>
@@ -151,8 +156,6 @@ Session["Target"] = tv;
                                   <div class="big-image-container"> <!--this is where the tricky stuff is-->
 
                                       <div class="big-image-inner-div">
-                                  <!--<img class="img-responsive" alt="Blue Shell" src="img/cl-blue-shell.png" style="/*display:block;position: relative;top: 0;left: 280px; margin-left: 200px; *//* margin-right: auto; */">-->
-
                                           <div class="left-text-outer-div">
                                               <div class="css-table-max-width-and-height">
                                                   <div class="css-table-cell-fully-centered">
@@ -166,9 +169,12 @@ Session["Target"] = tv;
 
                                           <div class="piv-div">
                                               <div class="piv-upper">
-                                               <asp:LinkButton ID="LinkButton1" runat="server" OnClick="PIVButton_Click">
+                                                  <a href="#" onclick="javascript: signinPIV();">
+                                                      <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
+                                                  </a>
+<%--                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="PIVButton_Click">
                                                      <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">                                                
-                                               </asp:LinkButton>
+                                               </asp:LinkButton>--%>
                                               </div>
                                               <div class="piv-lower">
                                                    <a href="#" data-toggle="modal" data-target="#other-sign-in-modal">View Other Sign-in Options</a>
@@ -239,11 +245,11 @@ Session["Target"] = tv;
                     <div class="row">
                          <div class="col-xs-12 cspselect-button-responsive-column">
 
-                            <button class="btn cspselect-csp-button" data-toggle="modal" data-target="#va-network-sign-in-modal" data-dismiss="modal">
+                            <button class="btn cspselect-csp-button" title="Sign in with VA Network ID" data-toggle="modal" data-target="#va-network-sign-in-modal" data-dismiss="modal">
 								<div class="cspselect-button-logo-div">
 									<div class="css-table-max-width-and-height">
 										<div class="css-table-cell-fully-centered">
-											<img class="cspselect-csp-logo-tall" src="img/sso-mod-va.png" alt="VA Logon Logo">
+											<img class="cspselect-csp-logo-tall" src="img/sso-mod-va.png" alt="Sign in with VA Network ID">
 										</div><!--close table-cell div-->
 									</div><!--close table div-->
 								</div>
@@ -261,9 +267,7 @@ Session["Target"] = tv;
 
 						</div> <%-- end of colum --%>
                        </div> <%-- end of row --%>
-
                     </div> <%--modal body--%>
-                
                 
                 <div class="modal-footer" style ="padding-top: 0px; border:0px">
                 <div class="row">

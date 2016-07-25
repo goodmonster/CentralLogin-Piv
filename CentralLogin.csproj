@@ -103,10 +103,8 @@
     <Content Include="help.aspx" />
     <Content Include="iploginfailed.aspx" />
     <Content Include="IWAhelp.aspx" />
-    <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\jquery-2.2.4.js" />
-    <Content Include="js\npm.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="loggedout.aspx" />
     <Content Include="mviloginfailed.aspx" />
     <Content Include="provloginfailed.aspx" />
