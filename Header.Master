@@ -37,8 +37,8 @@
 
 <!--Page Header-->
     <div class="page-header" style="margin-top:0px;">
-        <div class="row" style="background-image: url('img/cl-dark-blue.png'); background-size:cover; background-repeat:no-repeat">
-            <img class="img-responsive" src="img/cl-va-logo-transparent.png" alt="VA Emblem"/>
+        <div class="row" style="background-image: url('/CentralLogin/img/cl-dark-blue.png'); background-size:cover; background-repeat:no-repeat">
+            <img class="img-responsive" src="/CentralLogin/img/cl-va-logo-transparent.png" alt="VA Emblem"/>
  
         </div>
         <div class="row text-center" style="background-color:#1677bd; height: 35px; vertical-align:middle /*margin-left:-16px;*/">
@@ -77,7 +77,7 @@
 
     <!--Page Footer-->
     <div class="page-footer" style="margin: -20px;">
-        <div class="row" style="background-image: url(img/cl-dark-blue.png); height: 400px;"/>
+        <div class="row" style="background-image: url(/CentralLogin/img/cl-dark-blue.png); height: 400px;"/>
     </div>
 
 </div>
