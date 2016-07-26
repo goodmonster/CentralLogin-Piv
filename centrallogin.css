@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial Regular', 'Arial';
+    font-family: 'Arial Regular', 'Arial';
 }
 
 .vcenter {
@@ -9,10 +9,10 @@ body {
 }
 
 /*small image*/
- .sm-image-container {
-     text-align: center;
-     /*background-color: pink;/*debug*/
- }
+.sm-image-container {
+    text-align: center;
+    /*background-color: pink;/*debug*/
+}
 
 .sm-image-inner-div {
     display: inline-block;
@@ -24,6 +24,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .sm-top-text-outer-div {
     width: 80%;
     height: 45%;
@@ -31,9 +32,11 @@ body {
     position: relative;
     margin-left: 10%;
 }
+
 .sm-text-inner-div {
     margin-top: 40%;
 }
+
 .sm-upper-white-text {
     /* font-family: Arial, Helvetica, sans-serif !important; */
     font-size: 21px;
@@ -83,7 +86,7 @@ body {
     color: white;
     font-weight: 200;
     /* margin-left: 18%; */
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 /* custom styles here should be tweaked and out in your style sheets */
@@ -113,21 +116,25 @@ body {
     position: relative;
     /*border:1px solid green;/*debug*/
 }
+
 .css-table-cell-fully-centered {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
     float: none;
 }
+
 .css-table-max-width-and-height {
     display: table;
     height: 100%;
     width: 100%;
 }
+
 .cspselect-csp-logo-tall {
     height: 48px;
     margin: 0;
 }
+
 .left-text-inner-div {
     margin: 5% 0 0 5%;
     /*border:1px solid green;/*debug*/
@@ -135,8 +142,8 @@ body {
 
 .piv-div {
     overflow: hidden;
-    width: 37%;/**/
-    height: 100%;/**/
+    width: 37%; /**/
+    height: 100%; /**/
     padding: 5% 6% 0 0; /* this controls the placement of the right side "stuff" */
     /*border:1px solid blue;/*debug*/
     margin: 1% 0 0 20%;
@@ -150,24 +157,25 @@ body {
 .piv-img {
     max-width: 90%;
     max-height: 90%;
-    margin-left: 19%;
+    margin-left: 20%;
 }
+
 .piv-lower {
-    padding: 0;
-    margin: -4% 0 0 17%; /* this makes the link under the PIV image centered under the image */
+    /* padding: 0; */
+    margin: -4% 0 0 12%; /* this makes the link under the PIV image centered under the image */
     /*background-color: pink;/*debug*/
     /* border: solid; */
 }
 
-.piv-lower a {
-    padding: 0;
-    /* margin: 0 0 0 15%; */
-    /* font-family: Arial, Helvetica, sans-serif !important; */
-    font-size: 12px;
-    color: white;
-    margin-left: 15%;
-    text-decoration: underline;
-}
+    .piv-lower a {
+        /* padding: 0; */
+        /* margin: 0 0 0 15%; */
+        /* font-family: Arial, Helvetica, sans-serif !important; */
+        font-size: 12px;
+        color: white;
+        /* margin-left: 15%; */
+        /* text-decoration: underline; */
+    }
 
 .upper-white-text {
     font-family: Arial, Helvetica, sans-serif !important;
@@ -181,18 +189,89 @@ body {
     color: white;
 }
 
-/*Master Template*/
-    .mstr-legal-warning-row{
-        font-size:smaller;
-        text-align:left;
-        overflow-x: auto;
-        overflow-y: hidden;
-        margin-left:5vh;
-        margin-right:5vh
-    }
+/* Master Template */
+/* menue breadcrumb */
+.i5breadcrumb {
+    margin-bottom: 0px !important; */
+}
 
-    /*Modal Buttons*/
-    .cspselect-button-text-div {
+.breadcrumb {
+	background-color: #00467f;
+	margin: -15px;
+	/*border: 2px solid green;/*debug*/
+}
+
+.breadcrumb li {
+	font-size: 14px;
+    /*border: 1px solid white;/*debug*/
+	margin-right: 4px;
+}
+
+.breadcrumb a {
+	color: white;
+}
+
+.breadcrumb a:hover {
+	color: white;
+    /*border: 1px solid blue;/*debug*/
+}
+
+.breadcrumb>.active {
+	color: white;
+}
+
+.breadcrumb>li+li:before {
+	color: rgba(204, 204, 204, 1);
+	content: "|\00a0";
+}
+
+@media (max-width: 370px) {
+	/* trying to never wrap the now small breadcrumb even at small sizes */
+	.breadcrumb { 
+		/*background-color: black !important; /*debug*/
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+	.breadcrumb>li+li:before {
+		color: rgba(204, 204, 204, 1);
+		content: "|";
+	}
+	.breadcrumb li {
+		font-size: 13px;
+		margin-right: -2px;
+	}
+}
+
+@media (max-width: 300px) {
+	/* even crazy small */
+	.breadcrumb { 
+		padding-left: 1px;
+		padding-right: 1px;
+	}
+	.breadcrumb li {
+		font-size: 11px;
+		margin-right: -5px;
+	}
+}
+/*end of breadcrumbs*/
+.mstr-va-links{
+    margin-bottom: 1%;
+    color:#0000FF;
+    text-align:center;
+}
+
+
+.mstr-legal-warning-row {
+    font-size: smaller;
+    text-align: left;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+/*Modal Buttons*/
+.cspselect-button-text-div {
     color: black;
     float: right;
     text-align: center;
@@ -201,9 +280,9 @@ body {
     height: 55px;
     padding: 0px;
     border-left: 1px solid #a1a1a1;
-    }
+}
 
-    .cspselect-button-responsive-column {
+.cspselect-button-responsive-column {
     display: block;
     float: left;
     margin: 4px 8px 4px 0px;
@@ -212,39 +291,43 @@ body {
     /* min-height: 120px; */
     padding: 0px;
     /* padding: 13px 0 3px 0; */
-    }
-    .cspselect-csp-button {
-        /*me*/
-        display: flex;
-        align-items: center;
-        /* min-height: 82px; */
-        border: 1px solid;
-        /*background-color: #e9f0ff;*/
+}
+
+.cspselect-csp-button {
+    /*me*/
+    display: flex;
+    align-items: center;
+    /* min-height: 82px; */
+    border: 1px solid;
+    /*background-color: #e9f0ff;*/
     /*access va*/
-        font: bold 13px Verdana, Geneva, sans-serif;
-        background-color: #e9f0ff;
-        border-radius: 0px !important;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        border: 1px solid #0a92da;
-    }
-    .cspselect-button-logo-div {
+    font: bold 13px Verdana, Geneva, sans-serif;
+    background-color: #e9f0ff;
+    border-radius: 0px !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: 1px solid #0a92da;
+}
+
+.cspselect-button-logo-div {
     float: left;
     text-align: center;
     height: 66px;
     padding: 7px 0 8px 0;
     width: 35%;
-    }
-    .widget-confirm-redirect-cancel-button {
+}
+
+.widget-confirm-redirect-cancel-button {
     background-color: #ffffff;
     width: 83px !important;
     max-width: 83px !important;
     min-width: 83px !important;
     border: 1px solid #7f7f7f;
     border-radius: 0px;
-    }
-    .widget-confirm-redirect-next-button {
+}
+
+.widget-confirm-redirect-next-button {
     background-color: #1677bd;
     width: 83px !important;
     max-width: 83px !important;
@@ -262,27 +345,27 @@ body {
 /*:focus { border: 1px solid red !important; }/*debug*/
 
 #skiptocontent a {
-	padding:6px;
-	position: absolute;
-	top:-40px;
-	left:0px;
-	color:white;
-	border-right:1px solid white;
-	border-bottom:1px solid white;
-	border-bottom-right-radius:8px;
-	background:transparent;
-	-webkit-transition: top 1s ease-out, background 1s linear;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    color: white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-bottom-right-radius: 8px;
+    background: transparent;
+    -webkit-transition: top 1s ease-out, background 1s linear;
     transition: top 1s ease-out, background 1s linear;
     z-index: 100;
 }
 
 #skiptocontent a:focus {
-	position:absolute;
-	left:0px;
-	top:0px;
-	background:#BF1722;
-	outline:0;	
-	-webkit-transition: top .1s ease-in, background .5s linear;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #BF1722;
+    outline: 0;
+    -webkit-transition: top .1s ease-in, background .5s linear;
     transition: top .1s ease-in, background .5s linear;
 }
 
@@ -293,12 +376,18 @@ body {
 @media only screen and (max-width : 850px) {
     .piv-lower a {
         font-size: 11px;
+        margin-left: 5%;
     }
+
     .upper-white-text {
         font-size: 30px;
     }
+
     .lower-white-text {
         font-size: 16px;
+    }
+    .mstr-va-links{
+        margin-bottom:2%;
     }
 }
 
@@ -306,12 +395,15 @@ body {
     .piv-lower a {
         font-size: 10px;
     }
+
     .piv-upper {
         height: 81%; /* without this the words under shift down -- placement of "View Other Sign-in Options" is not perfect */
     }
+
     .upper-white-text {
         font-size: 26px;
     }
+
     .lower-white-text {
         font-size: 12px;
     }
@@ -322,15 +414,21 @@ body {
     .sm-piv-lower a {
         font-size: 8px;
     }
+
     .sm-piv-upper {
         height: 80%; /* probably will switch to vertical before this happens */
     }
+
     .sm-upper-white-text {
         font-size: 19px;
         /* color:  black; */
     }
+
     .sm-lower-white-text {
         font-size: 13px;
+    }
+    .mstr-va-links{
+        margin-bottom:3%;
     }
 }
 
@@ -355,52 +453,46 @@ body {
 
     .sm-piv-lower a {
         padding: 0;
-        /* margin: 0; */
-        /* font-family: Arial, Helvetica, sans-serif !important; */
         font-size: 7px;
         color: white;
-        /* font-weight: 200; */
-        /* margin-left: 18%; */
-    }
+     }
 }
 
 @media only screen and (max-width : 450px) {
 
-        .sm-piv-lower a {
-            font-size: 6px;
-        }
-        .sm-piv-upper {
-            height: 80%;
-        }
-        .sm-upper-white-text {
-            font-size: 12px;
-            /* color:  black; */
-        }
-        .sm-lower-white-text {
-            font-size: 7px;
-        }
-        .sm-piv-lower a {
-            /* padding: 0; */
-            /* margin: 0; */
-            /* font-family: Arial, Helvetica, sans-serif !important; */
-            /* font-size: 8px; */
-            /* color: white; */
-            /* font-weight: 200; */
-            /* margin-left: 18%; */
-        }
+    .sm-piv-lower a {
+        font-size: 6px;
     }
 
-@media only screen and (max-width : 400px) {
-        .sm-upper-white-text {
-            font-size: 10px;
-        }
-        
-        .sm-piv-lower a {
-             font-size: 5px;
-        }
-        .mstr-legal-warning-row{
-            margin-left: -15px;
-            margin-right: -15px;
+    .sm-piv-upper {
+        height: 80%;
     }
-        
-}  
+
+    .sm-upper-white-text {
+        font-size: 12px;
+        /* color:  black; */
+    }
+
+    .sm-lower-white-text {
+        font-size: 7px;
+    }
+
+    .mstr-va-links{
+        margin-bottom:4%;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .sm-upper-white-text {
+        font-size: 10px;
+    }
+
+    .sm-piv-lower a {
+        font-size: 4px;
+    }
+
+    .mstr-legal-warning-row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}

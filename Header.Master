@@ -14,13 +14,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <link href="centrallogin.css" type="text/css" rel="stylesheet"  />
-<!-- ########################################################################## -->
-<!-- ########################################################################## -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<%--<script src="js/jquery.min.js "></script>--%>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<%--<script src="js/bootstrap.min.js "></script>--%>
-<!-- ########################################################################## -->
+
 <head id="Head1">
     <title>VA Identity and Access Management System (IAM)</title>
     <%--<link type="text/css" rel="stylesheet" href="/CentralLogin/cspstyle.css" />--%>
@@ -36,15 +30,18 @@
     <div class="container-fluid" style="outline: 2px solid grey;">
 
 <!--Page Header-->
-    <div class="page-header" style="margin-top:0px;">
+    <div id="page-header">
         <div class="row" style="background-image: url('/CentralLogin/img/cl-dark-blue.png'); background-size:cover; background-repeat:no-repeat">
             <img class="img-responsive" src="/CentralLogin/img/cl-va-logo-transparent.png" alt="VA Emblem"/>
  
         </div>
-        <div class="row text-center" style="background-color:#1677bd; height: 35px; vertical-align:middle /*margin-left:-16px;*/">
-            <div class="col-md-offset-11 col-xs-offset-9 text-center">
-                    <a href="#" style="color:white; text-decoration:underline; white-space:nowrap; " data-toggle="modal" data-target="#contact-us-modal">Contact Us</a>
-            </div>
+         <div class="row">
+         <div class="col-md-12">
+             <ol class="breadcrumb i5breadcrumb">
+    		    <li><a href="#" onclick="javascript: location.reload();"> VA Single Sign-On</a></li>
+	    	    <li><a href="#" data-toggle="modal" data-target="#contact-us-modal">Contact Us</a></li>
+	        </ol>
+         </div>
         </div>
     </div>
   <%--</div>--%>
@@ -64,9 +61,9 @@
                 </div>
             </div>   
     </div>
-
+    <p>&nbsp;</p>
     <!--Links-->
-    <div class="row" style="margin-bottom:5%; color:#0000FF; text-align:center">
+    <div class="row mstr-va-links" >
         <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
             <p style="white-space: nowrap; font-size:smaller"><a href="http://www.va.gov/" style="text-decoration:underline;">Department of Veterans Affairs</a><span>&nbsp; |</span><span>&nbsp; </span><a href="http://www.va.gov/privacy/" style="text-decoration:underline;">Privacy Policy</a></p>
         </div>
@@ -177,26 +174,26 @@
               // FROM http://www.javascripter.net/faq/onmoused.htm
               // button press/highlight effects
  
-           //$('.application-button-image').mouseout(function () {
-           //          $(this).css("border-bottom-width", "2px");
-           //          $(this).css("border-right-width", "2px");
-           //          $(this).css("border-top-width", "0px");
-           //          $(this).css("border-left-width", "0px");
-           //   });
+           $('.application-button-image').mouseout(function () {
+                     $(this).css("border-bottom-width", "2px");
+                     $(this).css("border-right-width", "2px");
+                     $(this).css("border-top-width", "0px");
+                     $(this).css("border-left-width", "0px");
+              });
  
-           //   $('.application-button-image').mouseup(function(){
-           //          $(this).css("border-bottom-width", "2px");
-           //          $(this).css("border-right-width", "2px");
-           //          $(this).css("border-top-width", "0px");
-           //          $(this).css("border-left-width", "0px");
-           //   });
+              $('.application-button-image').mouseup(function(){
+                     $(this).css("border-bottom-width", "2px");
+                     $(this).css("border-right-width", "2px");
+                     $(this).css("border-top-width", "0px");
+                     $(this).css("border-left-width", "0px");
+              });
  
-           //   $('.application-button-image').mousedown(function(){
-           //          $(this).css("border-bottom-width", "0px"); // swap the borders because we have to have zero impact on overall width or else the layout will jump
-           //          $(this).css("border-right-width", "0px");
-           //          $(this).css("border-top-width", "2px");
-           //          $(this).css("border-left-width", "2px");
-           //   });
+              $('.application-button-image').mousedown(function(){
+                     $(this).css("border-bottom-width", "0px"); // swap the borders because we have to have zero impact on overall width or else the layout will jump
+                     $(this).css("border-right-width", "0px");
+                     $(this).css("border-top-width", "2px");
+                     $(this).css("border-left-width", "2px");
+              });
  
               // NOTE: this code is identical to code in app.jsp so they MUST BE MAINTAINED TO BE THE SAME (or factored out someday)
               if (notifyTimeout) {
@@ -214,6 +211,6 @@
               }
        });
 
- </script>
+   </script>
 </body>
 </html>

@@ -311,7 +311,7 @@ Session["Target"] = tv;
                 </div>
                 
                   <div class="row" id="usr-name" style="padding-top:1.2em; padding-bottom:1.2em;">
-                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:right; padding-top: .5em">
+                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:right;">
                              <label for="USERINPUT" id="userIdLabel">User ID</label>
                          </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align:left;">
@@ -320,7 +320,7 @@ Session["Target"] = tv;
                    </div>
 
                 <div class="row" id="pwd">
-                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:right;  padding-top: .5em">
+                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:right;">
                          <label for="PASSWORDINPUT">Password</label>
                      </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align:left;">

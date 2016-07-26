@@ -23,7 +23,7 @@
           <SQLDebugging>False</SQLDebugging>
           <ExternalProgram>
           </ExternalProgram>
-          <StartExternalURL>http://localhost:60500//CentralLogin/Default.aspx?appname=core&amp;URL=https://logon.dev2.iam.va.gov/CentralLogin/core/redirect.aspx&amp;TYPE=33619969&amp;REALMOID=06-e9bba37d-5ffc-49e2-aacd-247aca830e8a&amp;GUID=&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-rCzerr%2fZcM8bVQwUhkZ11lZR1R7UPEZupPeX0%2b0nqmB%2fITRyhfrMp1WWTjM0Veh8&amp;TARGET=-SM-http%3a%2f%2flogon%2edev2%2eiam%2eva%2egov%2ftesttraits%2fvha%2findex%2easp</StartExternalURL>
+          <StartExternalURL>http://localhost:60500/CentralLogin/Default.aspx?appname=core&amp;URL=https://logon.dev2.iam.va.gov/CentralLogin/core/redirect.aspx&amp;TYPE=33619969&amp;REALMOID=06-e9bba37d-5ffc-49e2-aacd-247aca830e8a&amp;GUID=&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-rCzerr%2fZcM8bVQwUhkZ11lZR1R7UPEZupPeX0%2b0nqmB%2fITRyhfrMp1WWTjM0Veh8&amp;TARGET=-SM-http%3a%2f%2flogon%2edev2%2eiam%2eva%2egov%2ftesttraits%2fvha%2findex%2easp</StartExternalURL>
           <StartCmdLineArguments>
           </StartCmdLineArguments>
           <StartWorkingDirectory>
