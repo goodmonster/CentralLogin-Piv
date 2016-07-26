@@ -134,7 +134,7 @@ Session["Target"] = tv;
                                           <div class="sm-piv-div">
                                               <div class="sm-piv-upper">
                                                   <a href="#" onclick="javascript: signinPIV();">
-                                                      <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
+                                                      <img class="img-responsive sm-piv-img application-button-image" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
                                                   </a>
 <%--                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">--%>
                                                      <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">--%>                                                
@@ -170,7 +170,7 @@ Session["Target"] = tv;
                                           <div class="piv-div">
                                               <div class="piv-upper">
                                                   <a href="#" onclick="javascript: signinPIV();">
-                                                      <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
+                                                      <img class="img-responsive piv-img application-button-image" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
                                                   </a>
 <%--                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="PIVButton_Click">
                                                      <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">                                                

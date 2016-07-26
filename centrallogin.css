@@ -61,26 +61,26 @@ body {
 
 .sm-piv-upper {
     height: 80%;
-    margin-left: 15%;
+    /* margin-left: 0%; */
     /*height: 36%;  controls how much vertical space the PIV image takes */
     /*border: 1px solid red;/*debug*/
 }
 
 .sm-piv-lower {
     padding: 0;
-    /* margin: 0 11% 0 0; */ /* this makes the link under the PIV image centered under the image */
+    margin: 3% 0 0 0; /* this makes the link under the PIV image centered under the image */
     /*background-color: pink;/*debug*/
 }
 
 .sm-piv-img {
     max-width: 100%;
     max-height: 100%;
-    margin-left: 12%;
+    /* margin-left: 12%; */
 }
 
 .sm-piv-lower a {
     padding: 0;
-    margin: 0;
+    /* margin: 6% 0 0 0; */
     /* font-family: Arial, Helvetica, sans-serif !important; */
     font-size: 9px;
     color: white;
@@ -161,21 +161,21 @@ body {
 }
 
 .piv-lower {
-    /* padding: 0; */
-    margin: -4% 0 0 12%; /* this makes the link under the PIV image centered under the image */
+    padding: 0;
+    margin: -4% 0 0 0; /* this makes the link under the PIV image centered under the image */
     /*background-color: pink;/*debug*/
     /* border: solid; */
 }
 
-    .piv-lower a {
-        /* padding: 0; */
-        /* margin: 0 0 0 15%; */
-        /* font-family: Arial, Helvetica, sans-serif !important; */
-        font-size: 12px;
-        color: white;
-        /* margin-left: 15%; */
-        /* text-decoration: underline; */
-    }
+.piv-lower a {
+    /* padding: 0; */
+    /* margin: 0 0 0 15%; */
+    /* font-family: Arial, Helvetica, sans-serif !important; */
+    font-size: 12px;
+    color: white;
+    /* margin-left: 15%; */
+    /* text-decoration: underline; */
+}
 
 .upper-white-text {
     font-family: Arial, Helvetica, sans-serif !important;
@@ -191,6 +191,22 @@ body {
 
 /* Master Template */
 /* menue breadcrumb */
+.application-button-image {
+	display: inline;		/* restore default value which changed to block by img-responsive, responsiveness seems ok, when it is block the focus outline does not work for keyboard only users' needs */
+	margin: 0 auto 0 auto;  /* center the image left/right in the column */
+	padding: 0 0 0 0;       /* 8px right keeps them from ever touching */
+	border-style: solid;
+	border-color: transparent;
+	border-radius: 10px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 2px; /* reserve bottom and right space to use top and left to button press shift the image */
+	border-right-width: 2px;
+}
+
+.application-button-image:hover{
+	background: #d0d0d0;
+}
 .i5breadcrumb {
     margin-bottom: 0px !important; */
 }
@@ -376,7 +392,7 @@ body {
 @media only screen and (max-width : 850px) {
     .piv-lower a {
         font-size: 11px;
-        margin-left: 5%;
+        /* margin-left: 5%; */
     }
 
     .upper-white-text {
