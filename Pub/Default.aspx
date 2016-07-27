@@ -140,12 +140,13 @@
 
                                           <div class="sm-piv-div">
                                               <div class="sm-piv-upper">
-                                                  <a href="#" onclick="javascript: signinPIV();">
+<%--                                                  <a href="#" onclick="javascript: signinPIV();">
                                                       <img class="img-responsive sm-piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
-                                                  </a>
-<%--                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">--%>
-                                                     <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">--%>                                                
-                                                   <%-- </asp:LinkButton>--%>
+                                                  </a>--%>
+                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">
+                                                     <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">  --%>  
+                                                     <img class="img-responsive sm-piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
+                                               </asp:LinkButton>
                                               </div>
                                               <div class="sm-piv-lower">
                                                  <a href="#" data-toggle="modal" data-target="#other-sign-in-modal" >View Other Sign-in Options</a>
@@ -176,9 +177,14 @@
 
                                           <div class="piv-div">
                                               <div class="piv-upper">
-                                                  <a href="#" onclick="javascript: signinPIV();">
+<%--                                                  <a href="#" onclick="javascript: signinPIV();">
                                                       <img class="img-responsive piv-img application-button-image" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
-                                                  </a>
+                                                  </a>--%>
+                                               <asp:LinkButton ID="LinkButton1" runat="server" OnClick="PIVButton_Click">
+                                                     <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">  --%>  
+                                                     <img class="img-responsive piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
+                                               </asp:LinkButton>
+
 <%--                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="PIVButton_Click">
                                                      <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">                                                
                                                </asp:LinkButton>--%>

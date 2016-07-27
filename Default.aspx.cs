@@ -91,12 +91,12 @@ namespace CentralLogin
         //    //window.location.assign("SomePage.aspx");
         //}
 
-        // protected void Network_Click(object sender, EventArgs e)
+        //protected void Network_Click(object sender, EventArgs e)
         //{
         //    String appname = Request["appname"];
         //    Response.Redirect(appname + "/network/redirect.aspx", true);
         //}
-  
+
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -113,11 +113,11 @@ namespace CentralLogin
 
         }
 
-        //protected void PIVButton_Click(object sender, EventArgs e)
-        //{
-        //   String appname = Request["appname"];
-        //   Response.Redirect(appname + "/PIV/piv.aspx", true);
-        //}
+        protected void PIVButton_Click(object sender, EventArgs e)
+        {
+            String appname = Request["appname"];
+            Response.Redirect(appname + "/PIV/piv.aspx", true);
+        }
 
     }
 }
