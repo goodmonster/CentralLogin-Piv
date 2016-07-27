@@ -7,7 +7,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <ProjectView>ShowAllFiles</ProjectView>
-    <NameOfLastUsedPublishProfile>Local</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>Release</NameOfLastUsedPublishProfile>
     <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <ProjectExtensions>
