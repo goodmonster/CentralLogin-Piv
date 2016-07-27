@@ -4,25 +4,32 @@
     
     <script type="text/javascript">
         function checkLogin() {
-            var login = document.getElementById("login");
+            
+            var userInput = document.getElementById("USERINPUT")
+            var pwInput = document.getElementById("PASSWORDINPUT")
 
-            if ((login.USER.value == "") && (login.PASSWORD.value == "")) {
+            if ((userInput.value == "") && (pwInput.value == "")) {
                 alert("Please enter a User ID and Password");
-                login.USER.focus();
+                userInput.focus();
                 return false;
             }
 
-            if (login.USER.value == "") {
+            if (userInput.value == "") {
                 alert("Please enter a valid User ID");
-                login.USER.focus();
+                userInput.focus();
                 return false;
             }
 
-            if (login.PASSWORD.value == "") {
+            if (pwInput.value == "") {
                 alert("Please enter a valid Password");
-                login.PASSWORD.focus();
+                pwInput.focus();
                 return false;
             }
+
+            //get the form and set user and pwd from modal
+            var login = document.getElementById("login");
+            login.USER = userInput.value
+            login.PASSWORD = pwInput.value
 
             login.action = "/siteminderagent/forms/login.fcc";
             <% Session["url"] = Request["URL"];%>
