@@ -59,8 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="azfailed.aspx" />
-    <Content Include="bin\CentralLogin.dll" />
-    <Content Include="bin\CentralLogin.pdb" />
     <Content Include="centrallanding.aspx" />
     <Content Include="concurloginfailed.aspx" />
     <Content Include="core\IWA\redirect.aspx" />
@@ -172,7 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Header.Master" />
-    <Content Include="bin\CentralLogin.dll.config" />
     <None Include="Properties\PublishProfiles\deploy.pubxml" />
     <None Include="Properties\PublishProfiles\IIS Local.pubxml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />

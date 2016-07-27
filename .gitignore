@@ -47,3 +47,10 @@ Temporary Items
 .apdisk
 obj/
 Properties/
+*.suo
+.vs/CentralLogin/v14/.suo
+bin/CentralLogin.dll
+bin/CentralLogin.dll.config
+bin/CentralLogin.pdb
+working_copy.txt
+.vs/CentralLogin/v14/.suo

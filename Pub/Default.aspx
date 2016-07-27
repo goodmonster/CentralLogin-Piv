@@ -3,6 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
     <script type="text/javascript">
+
+
         function checkLogin() {
             
             var userInput = document.getElementById("USERINPUT")
@@ -28,8 +30,8 @@
 
             //get the form and set user and pwd from modal
             var login = document.getElementById("login");
-            login.USER = userInput.value
-            login.PASSWORD = pwInput.value
+            login.USER = userInput
+            login.PASSWORD = pwInput
 
             login.action = "/siteminderagent/forms/login.fcc";
             <% Session["url"] = Request["URL"];%>
@@ -58,11 +60,11 @@
             window.location = appName + '/IWA/redirect.aspx'
         }
 
-        function signinPIV() {
+        <%--function signinPIV() {
             <% Session["appname"] = Request.QueryString["appname"];%>
             appName = '<%= Session["appname"]%>'
             window.location = appName + '/PIV/piv.aspx'
-        }
+        }--%>
 
     </script>
 </asp:Content>
@@ -143,7 +145,7 @@
 <%--                                                  <a href="#" onclick="javascript: signinPIV();">
                                                       <img class="img-responsive sm-piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
                                                   </a>--%>
-                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">
+                                               <asp:LinkButton ID="LinkButton_Piv_Sm" runat="server" OnClick="PIVButton_Click">
                                                      <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">  --%>  
                                                      <img class="img-responsive sm-piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
                                                </asp:LinkButton>
@@ -180,7 +182,7 @@
 <%--                                                  <a href="#" onclick="javascript: signinPIV();">
                                                       <img class="img-responsive piv-img application-button-image" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
                                                   </a>--%>
-                                               <asp:LinkButton ID="LinkButton1" runat="server" OnClick="PIVButton_Click">
+                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">
                                                      <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">  --%>  
                                                      <img class="img-responsive piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
                                                </asp:LinkButton>
