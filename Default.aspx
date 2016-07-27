@@ -46,15 +46,15 @@
         }
 
         function signinIWA() {
-            <% Session["appname"] =  Request.QueryString["appname"];%>
+            <% Session["appname"] = Request.QueryString["appname"];%>
             appName = '<%= Session["appname"]%>'
             window.location = appName + '/IWA/redirect.aspx'
         }
 
-       function signinPIV() {
-            <% Session["appname"] =  Request.QueryString["appname"];%>
+        function signinPIV() {
+            <% Session["appname"] = Request.QueryString["appname"];%>
             appName = '<%= Session["appname"]%>'
-           window.location = appName + '/PIV/piv.aspx'
+            window.location = appName + '/PIV/piv.aspx'
         }
 
     </script>
@@ -66,35 +66,35 @@
 <% Session["appname"] = Request["appname"];%>
 <%-- The following is a work around until CA ticket 00293628 is fixed, where the web agent replaces the "%" to "$%" or "-%" --%>
 <% 
-var tv = HttpUtility.UrlEncode(targetvalue);
-if (tv.Contains("%24%") || tv.Contains("%24+") )
-{
-	tv = tv.Replace("%24%","%");
-	tv = tv.Replace("%24+","+");
-}
-else
-if (tv.Contains("-%") || tv.Contains("-+") )
-{
-	tv = tv.Replace("-%","%");
-	tv = tv.Replace("-+","+");
-	tv = tv.Replace("--","-");
-}
-tv = HttpUtility.UrlDecode(tv);
-if (tv.Contains("#"))
-{
-	tv = tv.Replace("#","%23");
-}
-if (tv.Contains("&"))
-{
-	var after_first_amp = tv.ToString().Substring(tv.ToString().IndexOf("&")+1).ToString();
-	if (after_first_amp.Contains("&"))
-	{
-		after_first_amp = after_first_amp.Replace("&","%26");
-	}
-	var before_first_amp = tv.ToString().Substring(0,tv.ToString().IndexOf("&")+1).ToString();
-	tv = before_first_amp.ToString() + after_first_amp.ToString();
-}
-Session["Target"] = tv;
+    var tv = HttpUtility.UrlEncode(targetvalue);
+    if (tv.Contains("%24%") || tv.Contains("%24+"))
+    {
+        tv = tv.Replace("%24%", "%");
+        tv = tv.Replace("%24+", "+");
+    }
+    else
+    if (tv.Contains("-%") || tv.Contains("-+"))
+    {
+        tv = tv.Replace("-%", "%");
+        tv = tv.Replace("-+", "+");
+        tv = tv.Replace("--", "-");
+    }
+    tv = HttpUtility.UrlDecode(tv);
+    if (tv.Contains("#"))
+    {
+        tv = tv.Replace("#", "%23");
+    }
+    if (tv.Contains("&"))
+    {
+        var after_first_amp = tv.ToString().Substring(tv.ToString().IndexOf("&") + 1).ToString();
+        if (after_first_amp.Contains("&"))
+        {
+            after_first_amp = after_first_amp.Replace("&", "%26");
+        }
+        var before_first_amp = tv.ToString().Substring(0, tv.ToString().IndexOf("&") + 1).ToString();
+        tv = before_first_amp.ToString() + after_first_amp.ToString();
+    }
+    Session["Target"] = tv;
 %>
 <% Session["url"] = Request["URL"];%>
 <% Session["targetActualValue"] = Request["TARGET"];%>
@@ -134,7 +134,7 @@ Session["Target"] = tv;
                                           <div class="sm-piv-div">
                                               <div class="sm-piv-upper">
                                                   <a href="#" onclick="javascript: signinPIV();">
-                                                      <img class="img-responsive sm-piv-img application-button-image" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
+                                                      <img class="img-responsive sm-piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
                                                   </a>
 <%--                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">--%>
                                                      <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">--%>                                                
@@ -204,9 +204,9 @@ Session["Target"] = tv;
             <div class="modal-content">
                 <!-- Modal Header -->
                 <!--http://stackoverflow.com/questions/15976709/bootstrap-modal-with-buttonimg-that-hangs-over-the-edge-->
-                <div class="modal-header" style="background-image: url(img/sso-mod-header.png); height: 41px; padding-top: 0px; padding-bottom: 0px;">
+                <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); height: 41px; padding-top: 0px; padding-bottom: 0px;">
                     <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
-                        <img src="img/cl-x-close-modal.png"; width="20px"/>
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png"; width="20px" alt="Close Modal Button"/>
                     </button>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6"><span style="position: absolute; left: 15px; top: 12px; color: #FFFFFF;text-align: left;">VA Single Sign-On</span></div>
@@ -224,7 +224,7 @@ Session["Target"] = tv;
 								<div class="cspselect-button-logo-div">
 									<div class="css-table-max-width-and-height">
 										<div class="css-table-cell-fully-centered">
-											<img class="cspselect-csp-logo-tall" src="img/sso-mod-wia.png" alt="Sign in with Windows Authentication">
+											<img class="cspselect-csp-logo-tall" src="/CentralLogin/img/sso-mod-wia.png" alt="Sign in with Windows Authentication">
 										</div><!--close table-cell div-->
 									</div><!--close table div-->
 								</div>
@@ -251,7 +251,7 @@ Session["Target"] = tv;
 								<div class="cspselect-button-logo-div">
 									<div class="css-table-max-width-and-height">
 										<div class="css-table-cell-fully-centered">
-											<img class="cspselect-csp-logo-tall" src="img/sso-mod-va.png" alt="Sign in with VA Network ID">
+											<img class="cspselect-csp-logo-tall" src="/CentralLogin/img/sso-mod-va.png" alt="Sign in with VA Network ID">
 										</div><!--close table-cell div-->
 									</div><!--close table div-->
 								</div>
@@ -290,9 +290,9 @@ Session["Target"] = tv;
 
         <div class="modal-content">
             <!-- Modal Header -->
-            <div class="modal-header" style="background-image: url(img/sso-mod-header.png); ">
+            <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); ">
                     <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
-                        <img src="img/cl-x-close-modal.png"; width="20px"/>
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png"; width="20px"/>
                     </button>
                 <div class="row">
                    <div class="col-md-10" style="color: #FFFFFF">VA Single Sign-On</div>

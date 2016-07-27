@@ -20,7 +20,7 @@ body {
     height: 61vw;
     max-width: 417px;
     max-height: 604px;
-    background-image: url('img/cl-blue-shell-v.png');
+    background-image: url('/CentralLogin/img/cl-blue-shell-v.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -103,7 +103,7 @@ body {
     height: 42vw; /* keeps proper aspect ratio */
     max-width: 794px;
     max-height: 417px;
-    background-image: url('img/cl-blue-shell.png');
+    background-image: url('/CentralLogin/img/cl-blue-shell.png');
     background-repeat: no-repeat;
     background-size: cover;
     /*border:1px solid red;/*debug*/
@@ -167,15 +167,15 @@ body {
     /* border: solid; */
 }
 
-.piv-lower a {
-    /* padding: 0; */
-    /* margin: 0 0 0 15%; */
-    /* font-family: Arial, Helvetica, sans-serif !important; */
-    font-size: 12px;
-    color: white;
-    /* margin-left: 15%; */
-    /* text-decoration: underline; */
-}
+    .piv-lower a {
+        /* padding: 0; */
+        /* margin: 0 0 0 15%; */
+        /* font-family: Arial, Helvetica, sans-serif !important; */
+        font-size: 12px;
+        color: white;
+        /* margin-left: 15%; */
+        /* text-decoration: underline; */
+    }
 
 .upper-white-text {
     font-family: Arial, Helvetica, sans-serif !important;
@@ -190,92 +190,114 @@ body {
 }
 
 /* Master Template */
-/* menue breadcrumb */
+/* styles borrowed from va access */
 .application-button-image {
-	display: inline;		/* restore default value which changed to block by img-responsive, responsiveness seems ok, when it is block the focus outline does not work for keyboard only users' needs */
-	margin: 0 auto 0 auto;  /* center the image left/right in the column */
-	padding: 0 0 0 0;       /* 8px right keeps them from ever touching */
-	border-style: solid;
-	border-color: transparent;
-	border-radius: 10px;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-bottom-width: 2px; /* reserve bottom and right space to use top and left to button press shift the image */
-	border-right-width: 2px;
+    display: inline; /* restore default value which changed to block by img-responsive, responsiveness seems ok, when it is block the focus outline does not work for keyboard only users' needs */
+    margin: 0 auto 0 auto; /* center the image left/right in the column */
+    padding: 0 0 0 0; /* 8px right keeps them from ever touching */
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 10px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 2px; /* reserve bottom and right space to use top and left to button press shift the image */
+    border-right-width: 2px;
 }
 
-.application-button-image:hover{
-	background: #d0d0d0;
-}
+    .application-button-image:hover {
+        background: #d0d0d0;
+    }
+
+/* menue breadcrumb */
 .i5breadcrumb {
-    margin-bottom: 0px !important; */
+    margin-bottom: 0px !important;
+    */;
 }
 
 .breadcrumb {
-	background-color: #00467f;
-	margin: -15px;
-	/*border: 2px solid green;/*debug*/
+    background-color: #00467f;
+    margin: -15px;
+    /*border: 2px solid green;/*debug*/
 }
 
-.breadcrumb li {
-	font-size: 14px;
-    /*border: 1px solid white;/*debug*/
-	margin-right: 4px;
-}
+    .breadcrumb li {
+        font-size: 14px;
+        /*border: 1px solid white;/*debug*/
+        margin-right: 4px;
+    }
 
-.breadcrumb a {
-	color: white;
-}
+    .breadcrumb a {
+        color: white;
+    }
 
-.breadcrumb a:hover {
-	color: white;
-    /*border: 1px solid blue;/*debug*/
-}
+        .breadcrumb a:hover {
+            color: white;
+            /*border: 1px solid blue;/*debug*/
+        }
 
-.breadcrumb>.active {
-	color: white;
-}
+    .breadcrumb > .active {
+        color: white;
+    }
 
-.breadcrumb>li+li:before {
-	color: rgba(204, 204, 204, 1);
-	content: "|\00a0";
-}
+    .breadcrumb > li + li:before {
+        color: rgba(204, 204, 204, 1);
+        content: "|\00a0";
+    }
 
 @media (max-width: 370px) {
-	/* trying to never wrap the now small breadcrumb even at small sizes */
-	.breadcrumb { 
-		/*background-color: black !important; /*debug*/
-		padding-left: 6px;
-		padding-right: 6px;
-	}
-	.breadcrumb>li+li:before {
-		color: rgba(204, 204, 204, 1);
-		content: "|";
-	}
-	.breadcrumb li {
-		font-size: 13px;
-		margin-right: -2px;
-	}
+    /* trying to never wrap the now small breadcrumb even at small sizes */
+    .breadcrumb {
+        /*background-color: black !important; /*debug*/
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+        .breadcrumb > li + li:before {
+            color: rgba(204, 204, 204, 1);
+            content: "|";
+        }
+
+        .breadcrumb li {
+            font-size: 13px;
+            margin-right: -2px;
+        }
 }
 
 @media (max-width: 300px) {
-	/* even crazy small */
-	.breadcrumb { 
-		padding-left: 1px;
-		padding-right: 1px;
-	}
-	.breadcrumb li {
-		font-size: 11px;
-		margin-right: -5px;
-	}
+    /* even crazy small */
+    .breadcrumb {
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+        .breadcrumb li {
+            font-size: 11px;
+            margin-right: -5px;
+        }
 }
 /*end of breadcrumbs*/
-.mstr-va-links{
-    margin-bottom: 1%;
-    color:#0000FF;
-    text-align:center;
+
+/*header*/
+.mstr-header-logo-row {
+    background-image: url('/CentralLogin/img/cl-dark-blue.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+.mstr-va-links {
+    margin-bottom: 1%;
+    color: #0000FF;
+    text-align: center;
+}
+
+.mstr-va-link-text-p {
+    white-space: nowrap;
+}
+
+    .mstr-va-link-text-p a {
+        text-decoration: underline;
+        font-size: smaller;
+    }
 
 .mstr-legal-warning-row {
     font-size: smaller;
@@ -284,6 +306,15 @@ body {
     overflow-y: hidden;
     margin-left: 5vh;
     margin-right: 5vh;
+}
+
+.mstr-footer-div {
+    margin: -20px;
+}
+
+.mstr-footer-row {
+    background-image: url('/CentralLogin/img/cl-dark-blue.png');
+    height: 400px;
 }
 
 /*Modal Buttons*/
@@ -375,15 +406,15 @@ body {
     z-index: 100;
 }
 
-#skiptocontent a:focus {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background: #BF1722;
-    outline: 0;
-    -webkit-transition: top .1s ease-in, background .5s linear;
-    transition: top .1s ease-in, background .5s linear;
-}
+    #skiptocontent a:focus {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: #BF1722;
+        outline: 0;
+        -webkit-transition: top .1s ease-in, background .5s linear;
+        transition: top .1s ease-in, background .5s linear;
+    }
 
 /*              MEDEA POINTS            */
 
@@ -402,8 +433,9 @@ body {
     .lower-white-text {
         font-size: 16px;
     }
-    .mstr-va-links{
-        margin-bottom:2%;
+
+    .mstr-va-links {
+        margin-bottom: 2%;
     }
 }
 
@@ -443,8 +475,9 @@ body {
     .sm-lower-white-text {
         font-size: 13px;
     }
-    .mstr-va-links{
-        margin-bottom:3%;
+
+    .mstr-va-links {
+        margin-bottom: 3%;
     }
 }
 
@@ -471,7 +504,7 @@ body {
         padding: 0;
         font-size: 7px;
         color: white;
-     }
+    }
 }
 
 @media only screen and (max-width : 450px) {
@@ -493,8 +526,8 @@ body {
         font-size: 7px;
     }
 
-    .mstr-va-links{
-        margin-bottom:4%;
+    .mstr-va-links {
+        margin-bottom: 4%;
     }
 }
 

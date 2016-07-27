@@ -4,23 +4,22 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <!-- ########################################################################## -->
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 <head id="Head1">
-    <link href="/CentralLogin/css/bootstrap.css" type="text/css" rel="stylesheet">
-    <link href="centrallogin.css" type="text/css" rel="stylesheet"  />
+    <link href="/CentralLogin/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="/CentralLogin/css/centrallogin.css" type="text/css" rel="stylesheet" />
 
     <title>VA Identity and Access Management System (IAM)</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
 
@@ -28,191 +27,196 @@
     <div id="skiptocontent">
         <a href="#maincontent" class="skiptocontent">skip to main content</a>
     </div>
-    <%--<div class="container" style="max-width: 992px;outline: 1px solid grey;">--%>
-    <div class="container-fluid" style="outline: 2px solid grey;">
 
-<!--Page Header-->
-    <div id="page-header">
-        <div class="row" style="background-image: url('/CentralLogin/img/cl-dark-blue.png'); background-size:cover; background-repeat:no-repeat">
-            <img class="img-responsive" src="/CentralLogin/img/cl-va-logo-transparent.png" alt="VA Emblem"/>
- 
+    <div class="container-fluid">
+
+        <!--Page Header-->
+        <div id="page-header">
+            <div class="row mstr-header-logo-row">
+                <img class="img-responsive" src="/CentralLogin/img/cl-va-logo-transparent.png" alt="VA Logo" />
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb i5breadcrumb">
+                        <li><a href="#" onclick="javascript: location.reload();">VA Single Sign-On</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#contact-us-modal">Contact Us</a></li>
+                    </ol>
+                </div>
+            </div>
         </div>
-         <div class="row">
-         <div class="col-md-12">
-             <ol class="breadcrumb i5breadcrumb">
-    		    <li><a href="#" onclick="javascript: location.reload();"> VA Single Sign-On</a></li>
-	    	    <li><a href="#" data-toggle="modal" data-target="#contact-us-modal">Contact Us</a></li>
-	        </ol>
-         </div>
-        </div>
-    </div>
-  <%--</div>--%>
+        <%--end of header--%>
 
-     <div class="panel-body" id="maincontent">
+        <div class="panel-body" id="maincontent">
 
-            <div id="ContentBody" >
+            <div id="ContentBody">
                 <asp:ContentPlaceHolder ID="siteminderContent" runat="server"></asp:ContentPlaceHolder>
 
-             <!-- Legal Warning-->
-            <div class="row  mstr-legal-warning-row" >
-                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2" style="color: #990000; text-align:right" >
-                    <p>WARNING: </p>
-                </div>
-                <div class="col-xs-7 col-sm-10 col-md-10 col-lg-10">
-                   <p> You have accessed a United States Government computer. Unauthorized use of this computer is a violation of federal law and may be subject you to civil and criminal penalties. This computer and automated systems which run on it, are monitored. Individuals are not guaranteed privacy while using government computers and should, therefore, not expect it. Communications made using this system may be disclosed as allowed by federal law.</p>
-                </div>
-            </div>   
-    </div>
-    <p>&nbsp;</p>
-    <!--Links-->
-    <div class="row mstr-va-links" >
-        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-            <p style="white-space: nowrap; font-size:smaller"><a href="http://www.va.gov/" style="text-decoration:underline;">Department of Veterans Affairs</a><span>&nbsp; |</span><span>&nbsp; </span><a href="http://www.va.gov/privacy/" style="text-decoration:underline;">Privacy Policy</a></p>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs ">
-            <p style="white-space: nowrap;"><a href="http://www.va.gov/" style="text-decoration:underline;">Department of Veterans Affairs</a><span>&nbsp; |</span><span>&nbsp; </span><a href="http://www.va.gov/privacy/" style="text-decoration:underline;">Privacy Policy</a></p>
-        </div>
-    </div>
-
-    <!--Page Footer-->
-    <div class="page-footer" style="margin: -20px;">
-        <div class="row" style="background-image: url(/CentralLogin/img/cl-dark-blue.png); height: 400px;"/>
-    </div>
-
-</div>
-
-
-<!-- Modal Markup kept out of all the div elements -->
-<div class="modal fade" id="contact-us-modal">
-    <div class="modal-dialog" style="max-width: 528px;">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header" style="background-image: url(img/cl-dark-blue.png); height: 69px; padding-top: 0px; padding-bottom: 0px;">
-            <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
-                <img src="img/cl-x-close-modal.png" alt="Close Modal" width="20px"/>
-            </button>
-                <div class="row">
-                    <div class="col-xs-6 col-sm-6"><img src="img/cl-va-logo-modal.png" alt="VA Emblem Modal" ></div>
-               </div>
-             </div>
-
-            <!-- Modal Body -->
-            <div class="modal-body" style=" text-align:left; font-size: 15px;">
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <b>Contact method:</b>
+                 <p>&nbsp;</p>
+                <!-- Legal Warning-->
+                <div class="row  mstr-legal-warning-row">
+                    <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2" >
+                        <p style="color: #990000; text-align: right">WARNING: </p>
                     </div>
-                </div>
-
-                <!--<div class="row" style="text-align:left; font-weight: 400; font-size: 14px;">-->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <span>• </span> <b>Email:</b> <span> itsc@va.gov</span>
+                    <div class="col-xs-7 col-sm-10 col-md-10 col-lg-10">
+                        <p>You have accessed a United States Government computer. Unauthorized use of this computer is a violation of federal law and may be subject you to civil and criminal penalties. This computer and automated systems which run on it, are monitored. Individuals are not guaranteed privacy while using government computers and should, therefore, not expect it. Communications made using this system may be disclosed as allowed by federal law.</p>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <span>• </span> <b>Phone:</b> <span> 1-855-673-4357 (Option 3)</span>
-                    </div>
-                </div>
-                <!--<div class="row" style="text-align:left; font-weight: 400;font-size: 14px;">-->
-                <div class="row" >
-                    <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
-                        For general questions regarding the IAM authentication service, please contact the National Service Desk Support, VBA Philadelphia, at 855-673-4357 (Option 3)
-                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
-                        If you do not remember your PIN or experience other issues with your PIV card, please contact the National Service Desk Support:
-                        <!--</p><p><span style="color:#000000;">Phone: 800-877-4328 (Option 1)</span></p><p><span style="color:#000000;">Email: </span><span style="text-decoration:underline;color:#0000FF;">PIVHelpRequests@va.gov</span></p>                    </div>-->
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">Phone: 800-877-4328 (Option 1)</div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        Email: <span style="text-decoration:underline;color:#0000FF;">PIVHelpRequests@va.gov</span>
-                    </div>
-                </div>
-
+                </div><%--end of row --%>
                 
+            </div> <%--end of contentBody--%>
+           
+        </div><%-- end of panel-body--%>
+        
+        <p>&nbsp;</p>
 
+        <!--Links-->
+        <div class="row mstr-va-links">
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                <p class="mstr-va-link-text-p"><a href="http://www.va.gov/">Department of Veterans Affairs</a><span>&nbsp; |</span><span>&nbsp; </span><a href="http://www.va.gov/privacy/"">Privacy Policy</a></p>
             </div>
-            <!-- Modal Footer -->
-            <div class="modal-footer" style ="padding-top: 0px; border:0px">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
-                        <button type="button" class="widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal">Back</button>
+            <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs ">
+                <p class="mstr-va-link-text-p"><a href="http://www.va.gov/">Department of Veterans Affairs</a><span>&nbsp; |</span><span>&nbsp; </span><a href="http://www.va.gov/privacy/">Privacy Policy</a></p>
+            </div>
+        </div>
+
+        <!--Page Footer-->
+        <div class="page-footer mstr-footer-div" >
+            <div class="row mstr-footer-row" />
+        </div>
+
+    </div>
+
+
+    <!-- Modal Markup kept out of all the div elements -->
+    <div class="modal fade" id="contact-us-modal">
+        <div class="modal-dialog" style="max-width: 528px;">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header" style="background-image: url(/CentralLogin/img/cl-dark-blue.png); height: 69px; padding-top: 0px; padding-bottom: 0px;">
+                    <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" width="20px" />
+                    </button>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6">
+                            <img src="/CentralLogin/img/cl-va-logo-modal.png" alt="VA Emblem Modal"></div>
                     </div>
-                </div>            
-            </div>
+                </div>
 
+                <!-- Modal Body -->
+                <div class="modal-body" style="text-align: left; font-size: 15px;">
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <b>Contact method:</b>
+                        </div>
+                    </div>
+
+                    <!--<div class="row" style="text-align:left; font-weight: 400; font-size: 14px;">-->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <span>• </span><b>Email:</b> <span>itsc@va.gov</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <span>• </span><b>Phone:</b> <span>1-855-673-4357 (Option 3)</span>
+                        </div>
+                    </div>
+                    <!--<div class="row" style="text-align:left; font-weight: 400;font-size: 14px;">-->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
+                            For general questions regarding the IAM authentication service, please contact the National Service Desk Support, VBA Philadelphia, at 855-673-4357 (Option 3)
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
+                            If you do not remember your PIN or experience other issues with your PIV card, please contact the National Service Desk Support:
+                        <!--</p><p><span style="color:#000000;">Phone: 800-877-4328 (Option 1)</span></p><p><span style="color:#000000;">Email: </span><span style="text-decoration:underline;color:#0000FF;">PIVHelpRequests@va.gov</span></p>                    </div>-->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">Phone: 800-877-4328 (Option 1)</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            Email: <span style="text-decoration: underline; color: #0000FF;">PIVHelpRequests@va.gov</span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer" style="padding-top: 0px; border: 0px">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
+                            <button type="button" class="widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal">Back</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript">
-       var notifyTimeout = '';
-       var preModalSelectedID = '';
- 
-       function accessvaShowTimeoutPopUp() {
-              preModalSelectedID = ''; // cannot get a post pop-up focus to work just on a div or something (links work) so skip it for now
-              document.getElementById('lightweightModalIframe').src='/accessva/widget_timeout';
-              document.getElementById('lightweightModalBoxWrap').style.display='block';
-              document.getElementById('mainPageEnclosingDiv').setAttribute('aria-hidden','true');
-              document.getElementById('lightweightModalBoxWrap').setAttribute('aria-hidden','false');
-              setTimeout(setFocusOnModal, 500);
-       }
- 
-       $(document).ready(function() {
- 
-              // FROM http://www.javascripter.net/faq/onmoused.htm
-              // button press/highlight effects
- 
-           $('.application-button-image').mouseout(function () {
-                     $(this).css("border-bottom-width", "2px");
-                     $(this).css("border-right-width", "2px");
-                     $(this).css("border-top-width", "0px");
-                     $(this).css("border-left-width", "0px");
-              });
- 
-              $('.application-button-image').mouseup(function(){
-                     $(this).css("border-bottom-width", "2px");
-                     $(this).css("border-right-width", "2px");
-                     $(this).css("border-top-width", "0px");
-                     $(this).css("border-left-width", "0px");
-              });
- 
-              $('.application-button-image').mousedown(function(){
-                     $(this).css("border-bottom-width", "0px"); // swap the borders because we have to have zero impact on overall width or else the layout will jump
-                     $(this).css("border-right-width", "0px");
-                     $(this).css("border-top-width", "2px");
-                     $(this).css("border-left-width", "2px");
-              });
- 
-              // NOTE: this code is identical to code in app.jsp so they MUST BE MAINTAINED TO BE THE SAME (or factored out someday)
-              if (notifyTimeout) {
-                     // To avoid warning the user a second time if they click AUTHENTICATED links somehow on AccessVA and come back to this page,
-                     // we set a document cookie that will expire in ten minutes. That way if they do login again and timeout some time later,
-                     // it will be ready to warn again for that new login timeout.
-                     var alreadyNotifiedOfTimeout = accessvaGetCookie("alreadyNotifiedOfTimeout");
-                     if (alreadyNotifiedOfTimeout == null) {
-                           accessvaShowTimeoutPopUp();
-                           accessvaCreateCookie("alreadyNotifiedOfTimeout", "true", 600);
-                           $.ajax({ type : 'Get', url : '/accessva/useraction?action=unauth alreadyNotifiedOfTimeout cookie was NOT found and has been created'}); // log cookie not found
-                     } else {
-                           $.ajax({ type : 'Get', url : '/accessva/useraction?action=unauth alreadyNotifiedOfTimeout cookie was found'}); // log cookie found
-                     }
-              }
-       });
+    <script type="text/javascript" src="/CentralLogin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/CentralLogin/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var notifyTimeout = '';
+        var preModalSelectedID = '';
 
-   </script>
+        function accessvaShowTimeoutPopUp() {
+            preModalSelectedID = ''; // cannot get a post pop-up focus to work just on a div or something (links work) so skip it for now
+            document.getElementById('lightweightModalIframe').src = '/accessva/widget_timeout';
+            document.getElementById('lightweightModalBoxWrap').style.display = 'block';
+            document.getElementById('mainPageEnclosingDiv').setAttribute('aria-hidden', 'true');
+            document.getElementById('lightweightModalBoxWrap').setAttribute('aria-hidden', 'false');
+            setTimeout(setFocusOnModal, 500);
+        }
+
+        $(document).ready(function () {
+
+            // FROM http://www.javascripter.net/faq/onmoused.htm
+            // button press/highlight effects
+
+            $('.application-button-image').mouseout(function () {
+                $(this).css("border-bottom-width", "2px");
+                $(this).css("border-right-width", "2px");
+                $(this).css("border-top-width", "0px");
+                $(this).css("border-left-width", "0px");
+            });
+
+            $('.application-button-image').mouseup(function () {
+                $(this).css("border-bottom-width", "2px");
+                $(this).css("border-right-width", "2px");
+                $(this).css("border-top-width", "0px");
+                $(this).css("border-left-width", "0px");
+            });
+
+            $('.application-button-image').mousedown(function () {
+                $(this).css("border-bottom-width", "0px"); // swap the borders because we have to have zero impact on overall width or else the layout will jump
+                $(this).css("border-right-width", "0px");
+                $(this).css("border-top-width", "2px");
+                $(this).css("border-left-width", "2px");
+            });
+
+            // NOTE: this code is identical to code in app.jsp so they MUST BE MAINTAINED TO BE THE SAME (or factored out someday)
+            if (notifyTimeout) {
+                // To avoid warning the user a second time if they click AUTHENTICATED links somehow on AccessVA and come back to this page,
+                // we set a document cookie that will expire in ten minutes. That way if they do login again and timeout some time later,
+                // it will be ready to warn again for that new login timeout.
+                var alreadyNotifiedOfTimeout = accessvaGetCookie("alreadyNotifiedOfTimeout");
+                if (alreadyNotifiedOfTimeout == null) {
+                    accessvaShowTimeoutPopUp();
+                    accessvaCreateCookie("alreadyNotifiedOfTimeout", "true", 600);
+                    $.ajax({ type: 'Get', url: '/accessva/useraction?action=unauth alreadyNotifiedOfTimeout cookie was NOT found and has been created' }); // log cookie not found
+                } else {
+                    $.ajax({ type: 'Get', url: '/accessva/useraction?action=unauth alreadyNotifiedOfTimeout cookie was found' }); // log cookie found
+                }
+            }
+        });
+
+    </script>
 </body>
 </html>

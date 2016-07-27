@@ -68,11 +68,8 @@
     <Content Include="core\redirect.aspx" />
     <Content Include="csploginfailed.aspx" />
     <Content Include="csserror.aspx" />
-    <Content Include="css\bootstrap-theme.css" />
-    <Content Include="css\bootstrap-theme.min.css" />
-    <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
-    <Content Include="centrallogin.css" />
+    <Content Include="css\centrallogin.css" />
     <Content Include="CustomError\401.aspx" />
     <Content Include="CustomError\403.aspx" />
     <Content Include="CustomError\404.aspx" />
@@ -91,9 +88,9 @@
     <Content Include="img\cl-blue-shell.png" />
     <Content Include="img\cl-dark-blue.png" />
     <Content Include="img\cl-footer.png" />
+    <Content Include="img\cl-lightweight-modal-close-button.png" />
     <Content Include="img\cl-signon-modal.png" />
     <Content Include="img\cl-va-logo-modal.png" />
-    <Content Include="img\cl-x-close-modal.png" />
     <Content Include="img\cl-piv-btn.png" />
     <Content Include="img\cl-va-logo-transparent.png" />
     <Content Include="img\sso-mod-header.png" />
@@ -175,8 +172,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Header.Master" />
-    <Content Include="css\bootstrap-theme.css.map" />
-    <Content Include="css\bootstrap.css.map" />
     <Content Include="bin\CentralLogin.dll.config" />
     <None Include="Properties\PublishProfiles\deploy.pubxml" />
     <None Include="Properties\PublishProfiles\IIS Local.pubxml" />
