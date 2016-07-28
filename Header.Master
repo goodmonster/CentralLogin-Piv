@@ -15,7 +15,7 @@
     <![endif]-->
 
 <head id="Head1">
-    <link href="/CentralLogin/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="/CentralLogin/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <link href="/CentralLogin/css/centrallogin.css" type="text/css" rel="stylesheet" />
 
     <title>VA Identity and Access Management System (IAM)</title>
@@ -24,66 +24,67 @@
 </head>
 
 <body>
-    <div id="skiptocontent">
+    <div id="skiptocontent" role="navigation">
         <a href="#maincontent" class="skiptocontent">skip to main content</a>
     </div>
 
     <div class="container-fluid">
 
         <!--Page Header-->
-        <div id="page-header">
+        <header id="page-header">
             <div class="row mstr-header-logo-row">
-                <img class="img-responsive" src="/CentralLogin/img/cl-va-logo-transparent.png" alt="VA Logo" />
+                <img class="img-responsive" role="complementary" src="/CentralLogin/img/cl-va-logo-transparent.png" alt="VA Logo"/>
             </div>
 
             <div class="row">
                 <div class="col-md-12">
                     <ol class="breadcrumb i5breadcrumb">
-                        <li><a href="#" onclick="javascript: location.reload();">VA Single Sign-On</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#contact-us-modal">Contact Us</a></li>
+                        <li><a href="#" role="navigation" onclick="javascript: location.reload();">VA Single Sign-On</a></li>
+                        <li><a href="#" role="navigation" data-toggle="modal" data-target="#contact-us-modal">Contact Us</a></li>
                     </ol>
                 </div>
             </div>
-        </div>
+        </header>
         <%--end of header--%>
 
-        <div class="panel-body" id="maincontent">
+        <main id="maincontent">
 
             <div id="ContentBody">
-                <asp:ContentPlaceHolder ID="siteminderContent" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="siteminderContent" runat="server">
 
-                 <p>&nbsp;</p>
+                </asp:ContentPlaceHolder>
+                <p>&nbsp;</p>
                 <!-- Legal Warning-->
                 <div class="row  mstr-legal-warning-row">
-                    <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2" >
-                        <p style="color: #990000; text-align: right">WARNING: </p>
+                    <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                        <p role="contentinfo" style="color: #990000; text-align: right">WARNING: </p>
                     </div>
                     <div class="col-xs-7 col-sm-10 col-md-10 col-lg-10">
-                        <p>You have accessed a United States Government computer. Unauthorized use of this computer is a violation of federal law and may be subject you to civil and criminal penalties. This computer and automated systems which run on it, are monitored. Individuals are not guaranteed privacy while using government computers and should, therefore, not expect it. Communications made using this system may be disclosed as allowed by federal law.</p>
+                        <p role="contentinfo">You have accessed a United States Government computer. Unauthorized use of this computer is a violation of federal law and may be subject you to civil and criminal penalties. This computer and automated systems which run on it, are monitored. Individuals are not guaranteed privacy while using government computers and should, therefore, not expect it. Communications made using this system may be disclosed as allowed by federal law.</p>
                     </div>
                 </div><%--end of row --%>
-                
-            </div> <%--end of contentBody--%>
-           
-        </div><%-- end of panel-body--%>
-        
-        <p>&nbsp;</p>
+            </div><%--end of contentBody--%>
 
-        <!--Links-->
-        <div class="row mstr-va-links">
-            <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-                <p class="mstr-va-link-text-p"><a href="http://www.va.gov/">Department of Veterans Affairs</a><span>&nbsp; |</span><span>&nbsp; </span><a href="http://www.va.gov/privacy/"">Privacy Policy</a></p>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs ">
-                <p class="mstr-va-link-text-p"><a href="http://www.va.gov/">Department of Veterans Affairs</a><span>&nbsp; |</span><span>&nbsp; </span><a href="http://www.va.gov/privacy/">Privacy Policy</a></p>
-            </div>
-        </div>
+            <%-- </main> end of panel-body--%>
 
+            <p>&nbsp;</p>
+
+            <!--Links-->
+            <nav class="row mstr-va-links">
+                <div class="col-xs-12">
+                    <p class="mstr-va-link-text-p"><a role="contentinfo" href="http://www.va.gov/">Department of Veterans Affairs</a>&nbsp;|&nbsp;<a role="contentinfo" href="http://www.va.gov/privacy/">Privacy Policy</a></p>
+               </div>
+<%--                <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs ">
+                    <p class="mstr-va-link-text-p"><a role="contentinfo" href="http://www.va.gov/">Department of Veterans Affairs</a><span>&nbsp; |</span><span>&nbsp; </span><a href="http://www.va.gov/privacy/">Privacy Policy</a></p>
+                </div>--%>
+            </nav>
+
+        </main>
+        <%--end of panel-body--%>
         <!--Page Footer-->
-        <div class="page-footer mstr-footer-div" >
+        <footer class="page-footer mstr-footer-div">
             <div class="row mstr-footer-row" />
-        </div>
-
+        </footer>
     </div>
 
 
@@ -94,11 +95,12 @@
                 <!-- Modal Header -->
                 <div class="modal-header" style="background-image: url(/CentralLogin/img/cl-dark-blue.png); height: 69px; padding-top: 0px; padding-bottom: 0px;">
                     <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
-                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" width="20px" />
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal"/>
                     </button>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6">
-                            <img src="/CentralLogin/img/cl-va-logo-modal.png" alt="VA Emblem Modal"></div>
+                            <img src="/CentralLogin/img/cl-va-logo-modal.png" alt="VA Logo Modal">
+                        </div>
                     </div>
                 </div>
 

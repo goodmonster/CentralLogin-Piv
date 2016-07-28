@@ -121,12 +121,13 @@
 <input type="hidden" name="USER" value="" />
 <input type="hidden" id="xftpznq" /> 
         <!--Main Pannel-->
-        <div class="panel-body" id="mainPanelBody"  >
-<%--        <link href="centrallogin.css" type="text/css" rel="stylesheet"  />--%>
+        <div id="mainPanelBody"  >
+
             <div id="ContentBody" >
 
                 <!--Main Pannel-->
-                <div class="panel panel-default" style="border: 0;">
+                <div class="panel-body" style="border: 0;">
+
                     <!--Image with clickable areas-->
                     <div class="panel-body">
                         <div class="row">
@@ -140,8 +141,8 @@
                                               <div class="css-table-max-width-and-height">
                                                   <div class="css-table-cell-fully-centered">
                                                       <div class="sm-text-inner-div">
-                                                          <p class="sm-upper-white-text">VA SINGLE SIGN-ON</p>
-                                                          <p class="sm-lower-white-text">Sign in to continue</p>
+                                                          <p role="contentinfo" class="sm-upper-white-text">VA SINGLE SIGN-ON</p>
+                                                          <p role="contentinfo" class="sm-lower-white-text">Sign in to continue</p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -149,7 +150,7 @@
 
                                           <div class="sm-piv-div">
                                               <div class="sm-piv-upper">
-                                                  <a href="#" onclick="javascript: signinPIV();">
+                                                  <a role="navigation" href="#" onclick="javascript: signinPIV();">
                                                       <img class="img-responsive sm-piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
                                                   </a>
 <%--                                               <asp:LinkButton ID="LinkButton_Piv_Sm" runat="server" OnClick="PIVButton_Click">
@@ -157,7 +158,7 @@
                                                </asp:LinkButton>--%>
                                               </div>
                                               <div class="sm-piv-lower">
-                                                 <a href="#" data-toggle="modal" data-target="#other-sign-in-modal" >View Other Sign-in Options</a>
+                                                 <a href="#" role="navigation" data-toggle="modal" data-target="#other-sign-in-modal" >View Other Sign-in Options</a>
                                               </div>
                                           </div><!--end of piv-div-->
 
@@ -223,7 +224,7 @@
                 <!--http://stackoverflow.com/questions/15976709/bootstrap-modal-with-buttonimg-that-hangs-over-the-edge-->
                 <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); height: 41px; padding-top: 0px; padding-bottom: 0px;">
                     <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
-                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png"; width="20px" alt="Close Modal Button"/>
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png"; alt="Close Modal Button"/>
                     </button>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6"><span style="position: absolute; left: 15px; top: 12px; color: #FFFFFF;text-align: left;">VA Single Sign-On</span></div>
@@ -231,7 +232,7 @@
                 </div>
 
                 <!-- Modal Body -->
-                <div class="modal-body" style="margin-left:15% ;margin-right:15%; text-align: center;">
+                <main class="modal-body" style="margin-left:15% ;margin-right:15%; text-align: center;">
 
 
                     <div class="row">
@@ -286,16 +287,16 @@
 
 						</div> <%-- end of colum --%>
                        </div> <%-- end of row --%>
-                    </div> <%--modal body--%>
+                    </main> <%--modal body--%>
                 
-                <div class="modal-footer" style ="padding-top: 0px; border:0px">
+                <footer class="modal-footer" style ="padding-top: 0px; border:0px">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
                         <button type="button" class="widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal">Back</button>
                     </div>
                 </div>
 
-            </div>
+            </footer>
             </div>
         </div>
     </div>
@@ -309,7 +310,7 @@
             <!-- Modal Header -->
             <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); ">
                     <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
-                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png"; width="20px"/>
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png"; />
                     </button>
                 <div class="row">
                    <div class="col-md-10" style="color: #FFFFFF">VA Single Sign-On</div>
@@ -336,7 +337,7 @@
                         </div>
                    </div>
 
-                <div class="row" id="pwd">
+                <div class="row" id="pwd" style="padding-top:1.2em; padding-bottom:1.2em;">
                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:right;">
                          <label for="PASSWORDINPUT">Password</label>
                      </div>
