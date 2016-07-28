@@ -61,7 +61,7 @@ namespace CentralLogin
             if (!string.IsNullOrEmpty(target) && target.ToLower() != @"null")
             {
                 
-		targetvalue = target.Substring(4);
+		        targetvalue = target.Substring(4);
                 targetDisplayValue = target.Substring(4).Split(new char[] { '?' })[0].ToString();
 
                 if (target.ToLower().Contains("SPID".ToLower()))
@@ -73,7 +73,7 @@ namespace CentralLogin
                 }
             }
 	    else {
-		targetDisplayValue = "/Centrallogin/centrallanding.aspx";
+		    targetDisplayValue = "/Centrallogin/centrallanding.aspx";
             }	
         }
 
@@ -97,27 +97,26 @@ namespace CentralLogin
         //    Response.Redirect(appname + "/network/redirect.aspx", true);
         //}
 
+        //protected void TextBox1_TextChanged(object sender, EventArgs e)
+        //{
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
+        //}
 
-        }
+        //protected void TextBox2_TextChanged(object sender, EventArgs e)
+        //{
 
-        protected void TextBox2_TextChanged(object sender, EventArgs e)
-        {
+        //}
 
-        }
+        //protected void Button1_Click(object sender, EventArgs e)
+        //{
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
+        //}
 
-        }
-
-        protected void PIVButton_Click(object sender, EventArgs e)
-        {
-            String appname = Request["appname"];
-            Response.Redirect(appname + "/PIV/piv.aspx", true);
-        }
+        //protected void PIVButton_Click(object sender, EventArgs e)
+        //{
+        //    String appname = Request["appname"];
+        //    Response.Redirect(appname + "/PIV/piv.aspx", true);
+        //}
 
     }
 }

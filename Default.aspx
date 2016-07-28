@@ -7,8 +7,8 @@
 
         function checkLogin() {
             
-            var userInput = document.getElementById("USERINPUT")
-            var pwInput = document.getElementById("PASSWORDINPUT")
+            var userInput = document.getElementById("USERINPUT");
+            var pwInput = document.getElementById("PASSWORDINPUT");
 
             if ((userInput.value == "") && (pwInput.value == "")) {
                 alert("Please enter a User ID and Password");
@@ -30,8 +30,8 @@
 
             //get the form and set user and pwd from modal
             var login = document.getElementById("login");
-            login.USER = userInput
-            login.PASSWORD = pwInput
+            login.USER.value = userInput.value;
+            login.PASSWORD.value = pwInput.value;
 
             login.action = "/siteminderagent/forms/login.fcc";
             <% Session["url"] = Request["URL"];%>
@@ -55,16 +55,18 @@
         }
 
         function signinIWA() {
-            <% Session["appname"] = Request.QueryString["appname"];%>
-            appName = '<%= Session["appname"]%>'
-            window.location = appName + '/IWA/redirect.aspx'
+            <% Session["appname"] = Request.QueryString["appname"];%>;
+            appName = '<%= Session["appname"]%>';
+            window.location = appName + '/IWA/redirect.aspx';
+            return true;
         }
 
-        <%--function signinPIV() {
-            <% Session["appname"] = Request.QueryString["appname"];%>
-            appName = '<%= Session["appname"]%>'
-            window.location = appName + '/PIV/piv.aspx'
-        }--%>
+        function signinPIV() {
+            <% Session["appname"] = Request.QueryString["appname"];%>;
+            appName = '<%= Session["appname"]%>';
+            window.location = appName + '/PIV/piv.aspx';
+            return true;
+        }
 
     </script>
 </asp:Content>
@@ -113,6 +115,8 @@
 <input type="hidden" name="postpreservationdata" value="[[Same Base64(glob)]]" />
 <input type="hidden" name="SMENC" value="ISO-8859-1" />
 <input type="hidden" name="SMLOCALE" value="US-EN" />
+<input type="hidden"  name="USER" value="" />
+<input type="hidden"  name="PASSWORD" value="" />
         <!--Main Pannel-->
         <div class="panel-body" id="mainPanelBody"  >
 <%--        <link href="centrallogin.css" type="text/css" rel="stylesheet"  />--%>
@@ -142,13 +146,12 @@
 
                                           <div class="sm-piv-div">
                                               <div class="sm-piv-upper">
-<%--                                                  <a href="#" onclick="javascript: signinPIV();">
+                                                  <a href="#" onclick="javascript: signinPIV();">
                                                       <img class="img-responsive sm-piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
-                                                  </a>--%>
-                                               <asp:LinkButton ID="LinkButton_Piv_Sm" runat="server" OnClick="PIVButton_Click">
-                                                     <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">  --%>  
+                                                  </a>
+<%--                                               <asp:LinkButton ID="LinkButton_Piv_Sm" runat="server" OnClick="PIVButton_Click">
                                                      <img class="img-responsive sm-piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
-                                               </asp:LinkButton>
+                                               </asp:LinkButton>--%>
                                               </div>
                                               <div class="sm-piv-lower">
                                                  <a href="#" data-toggle="modal" data-target="#other-sign-in-modal" >View Other Sign-in Options</a>
@@ -179,17 +182,13 @@
 
                                           <div class="piv-div">
                                               <div class="piv-upper">
-<%--                                                  <a href="#" onclick="javascript: signinPIV();">
-                                                      <img class="img-responsive piv-img application-button-image" src="img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
-                                                  </a>--%>
-                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">
-                                                     <%--<img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">  --%>  
+                                                  <a href="#" onclick="javascript: signinpiv();">
+                                                      <img class="img-responsive piv-img application-button-image" src="img/cl-piv-btn.png" alt="sign in with piv" title="sign in with piv"/> 
+                                                  </a>
+<%--                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">
                                                      <img class="img-responsive piv-img application-button-image" src="/CentralLogin/img/cl-piv-btn.png" alt="Sign in with PIV" title="Sign in with PIV"/> 
-                                               </asp:LinkButton>
-
-<%--                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="PIVButton_Click">
-                                                     <img class="img-responsive piv-img" src="img/cl-piv-btn.png" alt="PIV login">                                                
                                                </asp:LinkButton>--%>
+
                                               </div>
                                               <div class="piv-lower">
                                                    <a href="#" data-toggle="modal" data-target="#other-sign-in-modal">View Other Sign-in Options</a>
