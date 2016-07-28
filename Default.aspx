@@ -31,7 +31,10 @@
             //get the form and set user and pwd from modal
             var login = document.getElementById("login");
             login.USER.value = userInput.value;
-            login.PASSWORD.value = pwInput.value;
+			
+			var xftpznq = document.getElementById("xftpznq");
+			xftpznq.name="PASSWORD";
+            xftpznq.value = pwInput.value;
 
             login.action = "/siteminderagent/forms/login.fcc";
             <% Session["url"] = Request["URL"];%>
@@ -115,8 +118,8 @@
 <input type="hidden" name="postpreservationdata" value="[[Same Base64(glob)]]" />
 <input type="hidden" name="SMENC" value="ISO-8859-1" />
 <input type="hidden" name="SMLOCALE" value="US-EN" />
-<input type="hidden"  name="USER" value="" />
-<input type="hidden"  name="PASSWORD" value="" />
+<input type="hidden" name="USER" value="" />
+<input type="hidden" id="xftpznq" /> 
         <!--Main Pannel-->
         <div class="panel-body" id="mainPanelBody"  >
 <%--        <link href="centrallogin.css" type="text/css" rel="stylesheet"  />--%>
