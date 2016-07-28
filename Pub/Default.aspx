@@ -182,7 +182,7 @@
 
                                           <div class="piv-div">
                                               <div class="piv-upper">
-                                                  <a href="#" onclick="javascript: signinpiv();">
+                                                  <a href="#" onclick="javascript: signinPIV();">
                                                       <img class="img-responsive piv-img application-button-image" src="img/cl-piv-btn.png" alt="sign in with piv" title="sign in with piv"/> 
                                                   </a>
 <%--                                               <asp:LinkButton ID="LinkButton_Piv_Lg" runat="server" OnClick="PIVButton_Click">
