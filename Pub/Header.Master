@@ -31,7 +31,7 @@
     <div class="container-fluid">
 
         <!--Page Header-->
-        <header id="page-header">
+        <div id="page-header">
             <div class="row mstr-header-logo-row">
                 <img class="img-responsive" role="complementary" src="/CentralLogin/img/cl-va-logo-transparent.png" alt="VA Logo"/>
             </div>
@@ -39,15 +39,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <ol class="breadcrumb i5breadcrumb">
-                        <li><a href="#" role="navigation" onclick="javascript: location.reload();">VA Single Sign-On</a></li>
-                        <li><a href="#" role="navigation" data-toggle="modal" data-target="#contact-us-modal">Contact Us</a></li>
+                        <li><a href="#" role="link" onclick="javascript: location.reload();">VA Single Sign-On</a></li>
+                        <li><a href="#" role="button" data-toggle="modal" data-target="#contact-us-modal">Contact Us</a></li>
                     </ol>
                 </div>
             </div>
-        </header>
+        </div>
         <%--end of header--%>
 
-        <main id="maincontent">
+        <div id="maincontent">
 
             <div id="ContentBody">
                 <asp:ContentPlaceHolder ID="siteminderContent" runat="server">
@@ -70,21 +70,19 @@
             <p>&nbsp;</p>
 
             <!--Links-->
-            <nav class="row mstr-va-links">
-                <div class="col-xs-12">
-                    <p class="mstr-va-link-text-p"><a role="contentinfo" href="http://www.va.gov/">Department of Veterans Affairs</a>&nbsp;|&nbsp;<a role="contentinfo" href="http://www.va.gov/privacy/">Privacy Policy</a></p>
+            <div class="row mstr-va-links">
+                <div class="col-md-12">
+                    <p class="mstr-va-link-text-p"><a role="link" href="http://www.va.gov/">Department of Veterans Affairs</a>&nbsp;|&nbsp;<a role="link" href="http://www.va.gov/privacy/">Privacy Policy</a></p>
                </div>
-<%--                <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs ">
-                    <p class="mstr-va-link-text-p"><a role="contentinfo" href="http://www.va.gov/">Department of Veterans Affairs</a><span>&nbsp; |</span><span>&nbsp; </span><a href="http://www.va.gov/privacy/">Privacy Policy</a></p>
-                </div>--%>
-            </nav>
+            </div>
 
-        </main>
+        </div>
         <%--end of panel-body--%>
+
         <!--Page Footer-->
-        <footer class="page-footer mstr-footer-div">
+        <div class="page-footer mstr-footer-div">
             <div class="row mstr-footer-row" />
-        </footer>
+        </div>
     </div>
 
 
@@ -95,7 +93,7 @@
                 <!-- Modal Header -->
                 <div class="modal-header" style="background-image: url(/CentralLogin/img/cl-dark-blue.png); height: 69px; padding-top: 0px; padding-bottom: 0px;">
                     <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
-                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal"/>
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" />
                     </button>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6">
@@ -113,7 +111,6 @@
                         </div>
                     </div>
 
-                    <!--<div class="row" style="text-align:left; font-weight: 400; font-size: 14px;">-->
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <span>• </span><b>Email:</b> <span>itsc@va.gov</span>
@@ -124,7 +121,6 @@
                             <span>• </span><b>Phone:</b> <span>1-855-673-4357 (Option 3)</span>
                         </div>
                     </div>
-                    <!--<div class="row" style="text-align:left; font-weight: 400;font-size: 14px;">-->
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
                             For general questions regarding the IAM authentication service, please contact the National Service Desk Support, VBA Philadelphia, at 855-673-4357 (Option 3)
@@ -134,7 +130,6 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
                             If you do not remember your PIN or experience other issues with your PIV card, please contact the National Service Desk Support:
-                        <!--</p><p><span style="color:#000000;">Phone: 800-877-4328 (Option 1)</span></p><p><span style="color:#000000;">Email: </span><span style="text-decoration:underline;color:#0000FF;">PIVHelpRequests@va.gov</span></p>                    </div>-->
                         </div>
                     </div>
 
@@ -153,7 +148,7 @@
                 <div class="modal-footer" style="padding-top: 0px; border: 0px">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
-                            <button type="button" class="widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal">Back</button>
+                            <button type="button" class="widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal"><b>Back</b></button>
                         </div>
                     </div>
                 </div>
