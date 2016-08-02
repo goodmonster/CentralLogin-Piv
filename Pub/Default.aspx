@@ -222,9 +222,9 @@
             <div class="modal-content">
                 <!-- Modal Header -->
                 <!--http://stackoverflow.com/questions/15976709/bootstrap-modal-with-buttonimg-that-hangs-over-the-edge-->
-                <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); height: 41px; padding-top: 0px; padding-bottom: 0px;">
+                <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); height: 61px; padding-top: 0px; padding-bottom: 0px;">
                     <button type="button" class="btn btn-default close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
-                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal"/>
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" style="width:120%; height:120%;"/>
                     </button>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6"><span style="position: absolute; left: 15px; top: 12px; color: #FFFFFF; text-align: left;">VA Single Sign-On</span></div>
@@ -323,12 +323,12 @@
 
             <div class="modal-content">
                 <!-- Modal Header -->
-                <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png);">
-                    <button type="button" class="close btn-default" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
-                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" />
+                 <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); height: 61px; padding-top: 0px; padding-bottom: 0px;">
+                    <button type="button" class="btn btn-default close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" style="width:120%; height:120%;"/>
                     </button>
                     <div class="row">
-                        <div class="col-md-10" style="color: #FFFFFF">VA Single Sign-On</div>
+                        <div class="col-xs-6 col-sm-6"><span style="position: absolute; left: 15px; top: 12px; color: #FFFFFF; text-align: left;">VA Single Sign-On</span></div>
                     </div>
                 </div>
 
