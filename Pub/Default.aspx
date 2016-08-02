@@ -368,7 +368,7 @@
                         </div>
                         <div class="col-lg-10  col-md-10 col-sm-10 col-xs-10">
                             <%-- Accessibility rule require more contrast, added bold to the lable and changed collor to white--%>
-                            <button type="button" id="va-network-sign-in-modal-signin" class="btn-default widget-confirm-redirect-next-button" style="float: right; color:white;" onclick="javascript: checkLogin();">Sign In</button>
+                            <button type="button" id="va-network-sign-in-modal-signin" class="btn btn-primary widget-confirm-redirect-next-button" style="float: right; color:white;" onclick="javascript: checkLogin();">Sign In</button>
                         </div>
                     </div>
 
