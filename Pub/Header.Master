@@ -24,11 +24,12 @@
 </head>
 
 <body>
+
+    <div class="container-fluid">
+
     <div id="skiptocontent" role="navigation">
         <a href="#maincontent" class="skiptocontent">skip to main content</a>
     </div>
-
-    <div class="container-fluid">
 
         <!--Page Header-->
         <div id="page-header">
@@ -85,10 +86,68 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="/CentralLogin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/CentralLogin/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var notifyTimeout = '';
+        var preModalSelectedID = '';
+
+        function accessvaShowTimeoutPopUp() {
+            preModalSelectedID = ''; // cannot get a post pop-up focus to work just on a div or something (links work) so skip it for now
+            document.getElementById('lightweightModalIframe').src = '/accessva/widget_timeout';
+            document.getElementById('lightweightModalBoxWrap').style.display = 'block';
+            document.getElementById('mainPageEnclosingDiv').setAttribute('aria-hidden', 'true');
+            document.getElementById('lightweightModalBoxWrap').setAttribute('aria-hidden', 'false');
+            setTimeout(setFocusOnModal, 500);
+        }
+
+        $(document).ready(function () {
+
+            // FROM http://www.javascripter.net/faq/onmoused.htm
+            // button press/highlight effects
+
+            $('.application-button-image').mouseout(function () {
+                $(this).css("border-bottom-width", "2px");
+                $(this).css("border-right-width", "2px");
+                $(this).css("border-top-width", "0px");
+                $(this).css("border-left-width", "0px");
+            });
+
+            $('.application-button-image').mouseup(function () {
+                $(this).css("border-bottom-width", "2px");
+                $(this).css("border-right-width", "2px");
+                $(this).css("border-top-width", "0px");
+                $(this).css("border-left-width", "0px");
+            });
+
+            $('.application-button-image').mousedown(function () {
+                $(this).css("border-bottom-width", "0px"); // swap the borders because we have to have zero impact on overall width or else the layout will jump
+                $(this).css("border-right-width", "0px");
+                $(this).css("border-top-width", "2px");
+                $(this).css("border-left-width", "2px");
+            });
+
+            // NOTE: this code is identical to code in app.jsp so they MUST BE MAINTAINED TO BE THE SAME (or factored out someday)
+            if (notifyTimeout) {
+                // To avoid warning the user a second time if they click AUTHENTICATED links somehow on AccessVA and come back to this page,
+                // we set a document cookie that will expire in ten minutes. That way if they do login again and timeout some time later,
+                // it will be ready to warn again for that new login timeout.
+                var alreadyNotifiedOfTimeout = accessvaGetCookie("alreadyNotifiedOfTimeout");
+                if (alreadyNotifiedOfTimeout == null) {
+                    accessvaShowTimeoutPopUp();
+                    accessvaCreateCookie("alreadyNotifiedOfTimeout", "true", 600);
+                    $.ajax({ type: 'Get', url: '/accessva/useraction?action=unauth alreadyNotifiedOfTimeout cookie was NOT found and has been created' }); // log cookie not found
+                } else {
+                    $.ajax({ type: 'Get', url: '/accessva/useraction?action=unauth alreadyNotifiedOfTimeout cookie was found' }); // log cookie found
+                }
+            }
+        });
+
+    </script>
 
     <!-- Modal Markup kept out of all the div elements -->
     <div class="modal fade" id="contact-us-modal" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: 528px; padding-top: 15%;">
+        <div class="modal-dialog" style="max-width: 528px; max-height:528px;">
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header" style="background-image: url(/CentralLogin/img/cl-dark-blue.png); height: 69px; padding-top: 0px; padding-bottom: 0px;">
@@ -156,64 +215,165 @@
             </div>
         </div>
     </div>
+        <!-- Modal Markup kept out of all the div elements -->
+    <div class="modal fade" id="other-sign-in-modal" role="dialog"  tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 528px; max-height:528px;">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <!--http://stackoverflow.com/questions/15976709/bootstrap-modal-with-buttonimg-that-hangs-over-the-edge-->
+                <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); height: 61px; padding-top: 0px; padding-bottom: 0px;">
+                    <button type="button" class="btn btn-default close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" style="width:120%; height:120%;"/>
+                    </button>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6"><span style="position: absolute; left: 15px; top: 12px; color: #FFFFFF; text-align: left; white-space: nowrap;">VA Single Sign-On</span></div>
+                    </div>
+                </div>
 
-    <script type="text/javascript" src="/CentralLogin/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/CentralLogin/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        var notifyTimeout = '';
-        var preModalSelectedID = '';
+                <!-- Modal Body -->
+                <div class="modal-body" style="margin-left: 15%; margin-right: 15%; text-align: center;">
 
-        function accessvaShowTimeoutPopUp() {
-            preModalSelectedID = ''; // cannot get a post pop-up focus to work just on a div or something (links work) so skip it for now
-            document.getElementById('lightweightModalIframe').src = '/accessva/widget_timeout';
-            document.getElementById('lightweightModalBoxWrap').style.display = 'block';
-            document.getElementById('mainPageEnclosingDiv').setAttribute('aria-hidden', 'true');
-            document.getElementById('lightweightModalBoxWrap').setAttribute('aria-hidden', 'false');
-            setTimeout(setFocusOnModal, 500);
-        }
 
-        $(document).ready(function () {
+                    <div class="row">
+                        <div class="col-xs-12 cspselect-button-responsive-column">
+                            <button id="btn_iwa_logon" class="btn btn-default cspselect-csp-button" title="Sign in with Windows Authentication" onclick="javascript: signinIWA();">
 
-            // FROM http://www.javascripter.net/faq/onmoused.htm
-            // button press/highlight effects
+                                <div class="cspselect-button-logo-div">
+                                    <div class="css-table-max-width-and-height">
+                                        <div class="css-table-cell-fully-centered">
+                                            <img class="cspselect-csp-logo-tall" src="/CentralLogin/img/sso-mod-wia.png" alt="Sign in with Windows Authentication">
+                                        </div>
+                                        <!--close table-cell div-->
+                                    </div>
+                                    <!--close table div-->
+                                </div>
 
-            $('.application-button-image').mouseout(function () {
-                $(this).css("border-bottom-width", "2px");
-                $(this).css("border-right-width", "2px");
-                $(this).css("border-top-width", "0px");
-                $(this).css("border-left-width", "0px");
-            });
+                                <div class="cspselect-button-text-div">
+                                    <div class="css-table-max-width-and-height">
+                                        <div class="css-table-cell-fully-centered">
+                                            <b>Sign in with</b><br />
+                                            <b>Windows Authentication</b>
+                                        </div>
+                                        <!--close table-cell div-->
+                                    </div>
+                                    <!--close table div-->
+                                </div>
+                            </button>
+                        </div>
+                        <%-- end of colum --%>
+                    </div>
+                    <%-- end of row --%>
 
-            $('.application-button-image').mouseup(function () {
-                $(this).css("border-bottom-width", "2px");
-                $(this).css("border-right-width", "2px");
-                $(this).css("border-top-width", "0px");
-                $(this).css("border-left-width", "0px");
-            });
+                    <%-- Spacer row --%>
+                    <div class="row">
+                        <div class="col-md-12">&nbsp;</div>
+                    </div>
 
-            $('.application-button-image').mousedown(function () {
-                $(this).css("border-bottom-width", "0px"); // swap the borders because we have to have zero impact on overall width or else the layout will jump
-                $(this).css("border-right-width", "0px");
-                $(this).css("border-top-width", "2px");
-                $(this).css("border-left-width", "2px");
-            });
+                    <div class="row">
+                        <div class="col-xs-12 cspselect-button-responsive-column">
 
-            // NOTE: this code is identical to code in app.jsp so they MUST BE MAINTAINED TO BE THE SAME (or factored out someday)
-            if (notifyTimeout) {
-                // To avoid warning the user a second time if they click AUTHENTICATED links somehow on AccessVA and come back to this page,
-                // we set a document cookie that will expire in ten minutes. That way if they do login again and timeout some time later,
-                // it will be ready to warn again for that new login timeout.
-                var alreadyNotifiedOfTimeout = accessvaGetCookie("alreadyNotifiedOfTimeout");
-                if (alreadyNotifiedOfTimeout == null) {
-                    accessvaShowTimeoutPopUp();
-                    accessvaCreateCookie("alreadyNotifiedOfTimeout", "true", 600);
-                    $.ajax({ type: 'Get', url: '/accessva/useraction?action=unauth alreadyNotifiedOfTimeout cookie was NOT found and has been created' }); // log cookie not found
-                } else {
-                    $.ajax({ type: 'Get', url: '/accessva/useraction?action=unauth alreadyNotifiedOfTimeout cookie was found' }); // log cookie found
-                }
-            }
-        });
+                            <button class="btn btn-default cspselect-csp-button" title="Sign in with VA Network ID" data-toggle="modal" data-target="#va-network-sign-in-modal" data-dismiss="modal">
+                                <div class="cspselect-button-logo-div">
+                                    <div class="css-table-max-width-and-height">
+                                        <div class="css-table-cell-fully-centered">
+                                            <img class="cspselect-csp-logo-tall" src="/CentralLogin/img/sso-mod-va.png" alt="Sign in with VA Network ID"/>
+                                        </div>
+                                        <!--close table-cell div-->
+                                    </div>
+                                    <!--close table div-->
+                                </div>
 
-    </script>
+                                <div class="cspselect-button-text-div">
+                                    <div class="css-table-max-width-and-height">
+                                        <div class="css-table-cell-fully-centered">
+                                            Sign in with<br />
+                                            VA Network ID<br />
+                                            <p style="font-weight: normal;">*Disabled for most users</p>
+                                        </div>
+                                        <!--close table-cell div-->
+                                    </div>
+                                    <!--close table div-->
+                                </div>
+                            </button>
+
+                        </div>
+                        <%-- end of colum --%>
+                    </div>
+                    <%-- end of row --%>
+                </div>
+                <%--modal body--%>
+
+                <div class="modal-footer" style="padding-top: 0px; border: 0px">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
+                            <button type="button" class="btn btn-default widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal">Back</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%--Modal Va Network sign in dialog prompt for user id and password--%>
+    <div class="modal fade" id="va-network-sign-in-modal" role="dialog" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" style="max-width:528px; max-height:528px;">
+
+            <div class="modal-content">
+                <!-- Modal Header -->
+                 <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); height: 61px; padding-top: 0px; padding-bottom: 0px;">
+                    <button type="button" class="btn btn-default close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" style="width:120%; height:120%;"/>
+                    </button>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6"><span style="position: absolute; left: 15px; top: 12px; color: #FFFFFF; text-align: left; white-space: nowrap;">VA Single Sign-On</span></div>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: left; font-size: 1.2em">
+                            <b>Temporary Access with VA Network ID</b>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: left; padding-top: .5em; padding-bottom: .5em">
+                            Enter your VA Active Directory (AD) user ID (i.e. vhaiswsmithj) and password:
+                        </div>
+                    </div>
+
+                    <div class="row" id="usr-name" style="padding-top: 1.2em; padding-bottom: 1.2em;">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: right;">
+                            <label for="USERINPUT" id="userIdLabel">User ID</label>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left;">
+                            <input id="USERINPUT" name="USER" class="loginInput" style="width: 100%" type="text" onkeypress="submitonenter('login', event)" />
+                        </div>
+                    </div>
+
+                    <div class="row" id="pwd" style="padding-top: 1.2em; padding-bottom: 1.2em;">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: right;">
+                            <label for="PASSWORDINPUT">Password</label>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left;">
+                            <input id="PASSWORDINPUT" name="PASSWORD" class="loginInput" style="width: 100%" type="password" onkeypress="submitonenter('login', event)" />
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <button type="button" id="va-network-sign-in-modal-back" class="btn btn-default widget-confirm-redirect-cancel-button" data-dismiss="modal">Back</button>
+                        </div>
+                        <div class="col-lg-10  col-md-10 col-sm-10 col-xs-10">
+                            <%-- Accessibility rule require more contrast, added bold to the lable and changed collor to white--%>
+                            <button type="button" id="va-network-sign-in-modal-signin" class="btn btn-primary widget-confirm-redirect-next-button" style="float: right; color:white;" onclick="javascript: checkLogin();">Sign In</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
