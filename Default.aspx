@@ -193,7 +193,7 @@
                                                 </a>
                                             </div>
                                             <div class="piv-lower">
-                                                <a href="#" data-toggle="modal" data-target="#other-sign-in-modal">View Other Sign-in Options</a>
+                                                <a href="#" data-toggle="modal" data-target="#other-sign-in-modal" area>View Other Sign-in Options</a>
                                             </div>
                                         </div><!--end of piv-div-->
 
@@ -216,15 +216,15 @@
     </form>
 
     <!-- Modal Markup kept out of all the div elements -->
-    <div class="modal fade" id="other-sign-in-modal">
+    <div class="modal fade" id="other-sign-in-modal" role="dialog"  tabindex="-1" aria-hidden="true">
 
         <div class="modal-dialog" style="max-width: 528px;">
             <div class="modal-content">
                 <!-- Modal Header -->
                 <!--http://stackoverflow.com/questions/15976709/bootstrap-modal-with-buttonimg-that-hangs-over-the-edge-->
                 <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png); height: 41px; padding-top: 0px; padding-bottom: 0px;">
-                    <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -15px; right: -5px; opacity: 0.9;">
-                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" style=" width: 150%; height: 150%;"/>
+                    <button type="button" class="btn btn-default close" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal"/>
                     </button>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6"><span style="position: absolute; left: 15px; top: 12px; color: #FFFFFF; text-align: left;">VA Single Sign-On</span></div>
@@ -237,7 +237,7 @@
 
                     <div class="row">
                         <div class="col-xs-12 cspselect-button-responsive-column">
-                            <button id="btn_iwa_logon" class="btn cspselect-csp-button" title="Sign in with Windows Authentication" onclick="javascript: signinIWA();">
+                            <button id="btn_iwa_logon" class="btn btn-default cspselect-csp-button" title="Sign in with Windows Authentication" onclick="javascript: signinIWA();">
 
                                 <div class="cspselect-button-logo-div">
                                     <div class="css-table-max-width-and-height">
@@ -273,7 +273,7 @@
                     <div class="row">
                         <div class="col-xs-12 cspselect-button-responsive-column">
 
-                            <button class="btn cspselect-csp-button" title="Sign in with VA Network ID" data-toggle="modal" data-target="#va-network-sign-in-modal" data-dismiss="modal">
+                            <button class="btn btn-default cspselect-csp-button" title="Sign in with VA Network ID" data-toggle="modal" data-target="#va-network-sign-in-modal" data-dismiss="modal">
                                 <div class="cspselect-button-logo-div">
                                     <div class="css-table-max-width-and-height">
                                         <div class="css-table-cell-fully-centered">
@@ -307,7 +307,7 @@
                 <div class="modal-footer" style="padding-top: 0px; border: 0px">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 10px;">
-                            <button type="button" class="widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal"><b>Back</b></button>
+                            <button type="button" class="btn btn-default widget-confirm-redirect-cancel-button" style="float: left;" data-dismiss="modal">Back</button>
                         </div>
                     </div>
 
@@ -317,16 +317,16 @@
     </div>
 
     <%--Modal Va Network sign in dialog prompt for user id and password--%>
-    <div class="modal fade" id="va-network-sign-in-modal">
+    <div class="modal fade" id="va-network-sign-in-modal" role="dialog" tabindex="-1" aria-hidden="true">
 
         <div class="modal-dialog" style="max-width: 528px;">
 
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header" style="background-image: url(/CentralLogin/img/sso-mod-header.png);">
-                     <button type="button" class="close" data-dismiss="modal" style="position: absolute; margin: 0; top: -15px; right: -5px; opacity: 0.9;">
-                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" style=" width: 150%; height: 150%;"/>
-                     </button>
+                    <button type="button" class="close btn-default" data-dismiss="modal" style="position: absolute; margin: 0; top: -10px; right: -10px; opacity: 0.9;">
+                        <img src="/CentralLogin/img/cl-lightweight-modal-close-button.png" alt="Close Modal" />
+                    </button>
                     <div class="row">
                         <div class="col-md-10" style="color: #FFFFFF">VA Single Sign-On</div>
                     </div>
@@ -364,11 +364,11 @@
 
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <button type="button" id="va-network-sign-in-modal-back" class="btn-default widget-confirm-redirect-cancel-button" data-dismiss="modal"><b>Back</b></button>
+                            <button type="button" id="va-network-sign-in-modal-back" class="btn btn-default widget-confirm-redirect-cancel-button" data-dismiss="modal">Back</button>
                         </div>
                         <div class="col-lg-10  col-md-10 col-sm-10 col-xs-10">
                             <%-- Accessibility rule require more contrast, added bold to the lable and changed collor to white--%>
-                            <button type="button" id="va-network-sign-in-modal-signin" class="widget-confirm-redirect-next-button" style="border-radius: 0px; float: right;" onclick="javascript: checkLogin();"><b>Sign In</b></button>
+                            <button type="button" id="va-network-sign-in-modal-signin" class="btn-default widget-confirm-redirect-next-button" style="float: right; color:white;" onclick="javascript: checkLogin();">Sign In</button>
                         </div>
                     </div>
 
